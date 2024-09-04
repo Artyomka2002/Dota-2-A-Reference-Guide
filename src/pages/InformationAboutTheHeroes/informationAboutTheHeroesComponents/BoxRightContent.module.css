@@ -1,199 +1,206 @@
 .ptext {
-    scrollbar-width: thin;
-    scrollbar-color: #FFB648 #1d1f24;
-    overflow: auto;
-    max-height: 430px;
+  scrollbar-width: thin;
+  scrollbar-color: #ffb648 #1d1f24;
+  overflow: auto;
+  max-height: 430px;
 }
 
-
-.containerTopImg>* {
-    display: flex;
-    text-align: start;
-    color: aliceblue;
-    align-items: center;
-    gap: 5px;
-    font-size: 25px;
-    font-family: cursive;
+.containerTopImg > * {
+  display: flex;
+  text-align: start;
+  color: aliceblue;
+  align-items: center;
+  gap: 5px;
+  font-size: 25px;
+  font-family: cursive;
 }
 
 .containerTopImg {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-.containerTopImg>label {
-    font-size: 20px;
-    font-family: sans-serif;
-    color: rgb(255, 182, 72);
+.containerTopImg > label {
+  font-size: 20px;
+  font-family: sans-serif;
+  color: rgb(255, 182, 72);
 }
 
 .conainetLeftTopImg {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .main {
-    display: flex;
-    padding: 10px;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .containerLim {
-    width: 66%;
 }
 
 .nestedCont {
-    display: flex;
+  display: flex;
 }
 
 .contInfoRight {
-    display: flex;
-    flex-direction: column;
-    font-size: 30px;
-    align-items: center;
-    font-family: cursive;
-    color: #FF7847;
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  align-items: center;
+  font-family: cursive;
+  color: #ff7847;
 }
 
 .imgHeroesURL {
-    width: 325px;
-    height: 450px;
-    margin-top: 10px;
-    border-radius: 10px;
+  width: 325px;
+  height: 450px;
+  margin-top: 10px;
+  border-radius: 10px;
 }
 
 .conteinerInfoLeft {
-    padding: 0 0 0 15px;
-    color: #FFB648;
-    font-family: cursive;
+  padding: 0 0 0 15px;
+  color: #ffb648;
+  font-family: cursive;
 }
 
 .spanHero {
-    font-size: 25px;
-    color: #FF7847;
+  font-size: 25px;
+  color: #ff7847;
 }
 
 .canvas {
-    height: 300px;
-    width: 100%;
+  height: 300px;
+  width: 100%;
 }
 
 .rightInfo {
-    border-left: solid 2px gray;
-    width: 33%;
-    display: flex;
-    flex-direction: column;
-    gap: 38px;
+  border-left: solid 2px gray;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 38px;
 }
 
 .h2Attr {
-    font-family: cursive;
-    text-align: center;
-    color: #5c5c5c;
-
+  font-family: cursive;
+  text-align: center;
+  color: #5c5c5c;
 }
 
 .blockLeftMainInfo {
-    gap: 6px;
-    display: flex;
-    flex-direction: column;
-    font-family: cursive;
-    color: #FFB648;
+  gap: 6px;
+  display: flex;
+  flex-direction: column;
+  width: 470px;
+  font-family: cursive;
+  color: #ffb648;
 }
 
 .contSpan {
-    display: flex;
-    font-size: 20px;
-    justify-content: space-around;
-    padding: 0 12px;
+  display: flex;
+  font-size: 20px;
+  justify-content: space-around;
+  padding: 0 12px;
 }
 
 .mainTwo {
-    text-align: center;
-    padding: 0 0 0 10px;
+  text-align: center;
+  padding: 0 0 0 10px;
 }
 
 .spanTitle {
-    font-size: 30px;
-    font-family: cursive;
+  font-size: 30px;
+  font-family: cursive;
 }
 
 .attrOne {
-    display: flex;
-    font-size: 20px;
-    justify-content: space-around;
+  display: flex;
+  font-size: 20px;
+  justify-content: space-around;
 }
 
 .contBotInfo {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 .contBotInfo > div {
-gap: 10px;
+  gap: 10px;
 }
 
 .attrHerosSpan {
-    font-size: 25px;
-    color: #5c5c5c;
-    font-family: cursive;
-
-
+  font-size: 25px;
+  color: #5c5c5c;
+  font-family: cursive;
 }
 
 .Health {
-    width: 80%;
-    background-color: rgb(74, 231, 0);
-    height: 32px;
-    border-radius: 8px 8px 0 0;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 420px;
+  background-color: rgb(74, 231, 0);
+  height: 32px;
+  border-radius: 8px 8px 0 0;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .Manapul {
-    width: 80%;
-    height: 20px;
-    text-align: center;
-    border-radius: 0 0 12px 12px;
-    background-color: rgb(52, 158, 255);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 420px;
+  height: 20px;
+  text-align: center;
+  border-radius: 0 0 12px 12px;
+  background-color: rgb(52, 158, 255);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .HeatManaContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  margin-top: 20PX;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-
-
 .colapseContainer {
-    padding: 0 10px 0 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
+  padding: 0 10px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 .GrInfo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.GrInfo>h3 {
-    color: #FFB648;
-    padding: 6px 0;
+.GrInfo > h3 {
+  color: #ffb648;
+  padding: 6px 0;
 }
 
 .pBottom {
-    font-size: 10px;
-    text-align: end;
-    font-family: system-ui;
+  font-size: 10px;
+  text-align: end;
+  font-family: system-ui;
+}
+
+.buttonNavigateBottom {
+  background-color: #1d1f24;
+  border: none;
+  color: #ffb648;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }

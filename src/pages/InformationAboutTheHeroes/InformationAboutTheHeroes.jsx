@@ -35,7 +35,7 @@ const InformationAboutTheHeroes = () => {
         //     {dataSorce.localized_name } , Айди элемента 
         //    </>
         <main className={cl.main}>
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', padding:'10px' }}>
                 <NestedContent dataSorce={dataSorce} sort={sort(dataSorce, links)} />
                 <CollapseContainer dataSorce={dataSorce} dateded={dateded} id={id} />
             </div>
