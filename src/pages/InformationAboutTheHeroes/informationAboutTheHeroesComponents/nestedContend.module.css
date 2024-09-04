@@ -1,0 +1,93 @@
+.nestedCont {
+    display: flex;
+}
+
+.contInfoRight {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    align-items: center;
+    font-family: cursive;
+    color: #FF7847;
+}
+
+.imgHeroesURL {
+    width: 325px;
+    height: 450px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.conteinerInfoLeft {
+    padding: 0 0 0 15px;
+    color: #FFB648;
+    font-family: cursive;
+}
+
+.spanHero {
+    font-size: 25px;
+    color: #FF7847;
+}
+
+.canvas {
+    height: 300px;
+    width: 100%;
+}
+
+.ptext {
+    scrollbar-width: thin;
+    scrollbar-color: #FFB648 #1d1f24;
+    overflow: auto;
+    max-height: 430px;
+}
+
+@media(max-width:860px) {
+    .imgHeroesURL {
+        width: 215px;
+        height: 280px;
+    }
+
+    .ptext {
+        max-height: 250px;
+        text-align: justify;
+    }
+}
+
+@media(max-width:540px) {
+    .imgHeroesURL {
+        width: 150px;
+        height: 210px
+    }
+    .ptext {
+        max-height: 180px;
+        text-align: justify;
+    }
+}
+
+@media(max-width:540px) {
+    .imgHeroesURL {
+        width: 150px;
+        height: 210px
+    }
+    .ptext {
+        max-height: 180px;
+        text-align: justify;
+    }
+}
+
+@media(max-width:440px) {
+    .imgHeroesURL {
+        width: 100%;
+        height: 400px
+    }
+    .ptext {
+        max-height: 250px;
+        text-align: justify;
+    }
+    .nestedCont {
+        flex-direction: column;
+    }
+    .conteinerInfoLeft{
+        padding-left: none;
+    }
+}

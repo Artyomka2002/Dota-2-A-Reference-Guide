@@ -1,0 +1,84 @@
+.filterAttr {
+    display: flex;
+    flex-direction: column;
+}
+
+.filterRoles {
+    height: 25px;
+    background-color: rgb(81, 81, 81);
+    border-radius: 8px;
+    color: #F6D265;
+    font-family: monospace;
+    font-size: 12px;
+}
+
+.filterRoles:hover {
+    background-color: #3f3f3f;
+    /* background-color: #6c7385; */
+    transition: 0.4s;
+    font-size: 13px;
+    padding: 0 0 2px 0;
+}
+
+.spanFirstOpen {
+    width: 380px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    color: burlywood;
+    font-family: monospace;
+}
+
+.closeBut {
+    background-color: rgb(81, 81, 81);
+    border-radius: 8px;
+    color: #F6D265;
+    font-family: cursive;
+    font-size: 12px;
+    height: 22px;
+    margin-top: 8px;
+    border: solid 1px;
+}
+
+.containerFilter {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+    flex-direction: row-reverse;
+}
+
+.rightFilter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.leftFilter {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    gap: 4px;
+}
+
+@media(max-width:920px) {
+    .containerFilter {
+        flex-direction: column;
+    }
+
+    .leftFilter {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .spanFirstOpen {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .filterRoles {
+        width: 100%;
+        font-size: 14px;
+    }
+}

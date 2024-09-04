@@ -1,0 +1,103 @@
+.colapseContainer {
+    padding: 0 10px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.pBottom {
+    text-align: end;
+    font-family: system-ui;
+}
+
+.GrInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.GrInfo>h3 {
+    color: #FFB648;
+    padding: 6px 0;
+}
+
+.containerGraficsItem {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1400px;
+}
+
+.videoContant {
+    display: flex;
+    justify-content: space-around;
+    height: 350px;
+    gap: 30px;
+    background-size: 100% 100%
+}
+
+.videoContant>div {
+    height: 100%;
+    width: 100%;
+    gap: 10px;
+    display: flex;
+}
+
+.videoContant>div:last-child {
+    text-align: end;
+}
+
+.videoContantContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.videoContantContainer>span {
+    padding: 0 0 10px 0;
+    color: rgb(255, 182, 72);
+    font-family: fantasy;
+    text-align: center;
+    font-size: 30px;
+}
+
+@media(max-width:1350px) {
+    .colapseContainer {
+        padding: 0;
+    }
+}
+
+@media(max-width:860px) {
+    .GrInfo {
+        width: 100%;
+    }
+
+    .videoContant {
+        flex-direction: column;
+        height: 700px;
+        width: 600px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .videoContantContainer {
+        align-items: center;
+    }
+}
+@media(max-width:650px) {
+    .videoContant {
+        height: 570px;
+        width: 100%;
+    } 
+    .pBottom{
+        font-size: 12px;
+    }
+}
+@media(max-width:460px) {
+  
+    .pBottom{
+        font-size: 8px;
+    }
+}
+

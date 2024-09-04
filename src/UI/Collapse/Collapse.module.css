@@ -1,0 +1,54 @@
+.active_i {
+    display: none;
+    transition: 0.5s;
+}
+
+
+
+.collapseBlockVis {
+    width: inherit;
+    height: auto;
+    background-color: #1d1f24;
+    color: cadetblue;
+    z-index: -1;
+    position: sticky;
+    top: 50px;
+}
+
+.visionBlickCl {
+    height: 80px;
+    background-color: #5c5c5c;
+    color: #FFB648;
+    font-family: cursive;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 20px;
+    font-size: 30px;
+}
+
+.visionBlickCl_active {
+    background-color: #51422c4d;
+    font-family: cursive;
+    display: flex;
+    color: #FFB648;
+    height: 80px;
+    align-items: center;
+    padding: 0 0 0 20px;
+    cursor: pointer;
+    font-size: 30px;
+    border-radius: 20px;
+}
+
+.visionBlickCl:hover {
+    border-radius: 20px;
+    transition: 1s;
+    background-color: #51422c4d;
+    cursor: pointer;
+}
+@media(max-width:460px) {
+  
+    .visionBlickCl_active{
+       padding: 0;
+       justify-content: center;
+    }
+}

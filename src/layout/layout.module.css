@@ -1,0 +1,102 @@
+/* style={{color:'#fff', textDecoration:'none', color:'#F6D265'}} */
+
+.footerCont {
+    width: 100%;
+    border-top: solid 1px #6c7385;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F6D265;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.manestedContnBlock {
+    background-color: #1d1f24;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.toPannel {
+    height: 80px;
+    font-family: monospace;
+    font-size: 22px;
+    display: flex;
+    background-color: #1d1f24;
+    align-items: center;
+    padding: 0 12px;
+    justify-content: space-around;
+    color: #F6D265;
+    border-bottom: solid 1px #6c7385;
+}
+
+.svgDota {
+    height: 60px;
+    margin-top: 10px;
+}
+
+.svgDota:hover {
+    transform: rotate(360deg);
+    transition: 2s;
+}
+
+.headerText {
+    width: 50%;
+    margin-left: 40px
+}
+
+.headerLeftContent {
+    display: flex;
+    font-size: 32px;
+    font-family: fantasy;
+}
+
+.headerRightContent {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+}
+
+.footerLink {
+    position: relative;
+}
+
+.footerLink::before {
+    content: '→';
+    right: -30px;
+    position: absolute;
+    transition: transform 0.45s ease;
+     transform-origin: center center;
+}
+
+.footerLinkContainer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 20px;
+}
+
+.footerLinkContainer>a {
+    text-decoration: none;
+    color: #F6D265;
+}
+
+.footerLinkContainer>a:hover {
+    text-decoration: none;
+    color: #f3f3f3;
+}
+
+.footerLinkContainer:hover .footerLink::before {
+    transform: rotate(180deg); 
+}
+
+@media(max-width:860px) {
+    .headerLeftContent {
+        display: none;
+    }
+
+
+}

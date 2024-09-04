@@ -1,0 +1,27 @@
+E1:updater.cc(338)] UpdaterMain (--wake) returned 0.
+[9752:25472:0830/033853.493:VERBOSE1:updater.cc(338)] UpdaterMain (--crash-handler) returned 0.
+[32416:6728:0830/033903.498:VERBOSE2:app_server_win.cc(251)] Stop: COM server is shutting down.
+[16496:25100:0830/033903.498:VERBOSE2:app_server_win.cc(251)] Stop: COM server is shutting down.
+[16496:25100:0830/033903.498:VERBOSE2:app_server_win.cc(311)] Completed task, Microsoft::WRL::Module count: 0
+[16496:14756:0830/033903.498:VERBOSE1:prefs.cc(226)] Prefs committed.
+[16496:25100:0830/033903.498:VERBOSE1:prefs.cc(139)] ~UpdaterPrefsImpl: C:\Program Files (x86)\Google\GoogleUpdater\129.0.6651.0
+[32416:6728:0830/033903.498:VERBOSE2:app_server_win.cc(311)] Completed task, Microsoft::WRL::Module count: 0
+[32416:26336:0830/033903.498:VERBOSE1:prefs.cc(226)] Prefs committed.
+[32416:6728:0830/033903.498:VERBOSE1:prefs.cc(139)] ~UpdaterPrefsImpl: C:\Program Files (x86)\Google\GoogleUpdater
+[16496:13816:0830/033903.499:VERBOSE1:updater.cc(338)] UpdaterMain (--windows-service) returned 0.
+[32416:25904:0830/033903.500:VERBOSE1:updater.cc(338)] UpdaterMain (--windows-service) returned 0.
+[16896:24780:0830/033903.502:VERBOSE1:updater.cc(338)] UpdaterMain (--crash-handler) returned 0.
+[27360:26912:0830/033903.504:VERBOSE1:updater.cc(338)] UpdaterMain (--crash-handler) returned 0.
+[33908:30120:0830/042628.233:VERBOSE1:updater.cc(331)] Version: 129.0.6651.0, opt, 32 bits, command line: "C:\Program Files (x86)\Google\GoogleUpdater\129.0.6651.0\updater.exe" --system --windows-service --service=update
+[33908:30120:0830/042628.233:VERBOSE1:updater.cc(333)] OS version: 10.0.22631.4037, System uptime (seconds): 826658, parent pid: 352
+[24676:24348:0830/042628.260:VERBOSE1:updater.cc(331)] Version: 129.0.6651.0, opt, 32 bits, command line: "C:\Program Files (x86)\Google\GoogleUpdater\129.0.6651.0\updater.exe" --crash-handler --system "--database=C:\Program Files (x86)\Google\GoogleUpdater\129.0.6651.0\Crashpad" --url=https://clients2.google.com/cr/report --annotation=prod=Update4 --annotation=ver=129.0.6651.0 "--attachment=C:\Program Files (x86)\Google\GoogleUpdater\updater.log" --initial-client-data=0x2b0,0x2d8,0x2dc,0x2bc,0x2e0,0x13906cc,0x13906d8,0x13906e4
+[24676:24348:0830/042628.260:VERBOSE1:updater.cc(333)] OS version: 10.0.22631.4037, System uptime (seconds): 826658, parent pid: 33908
+[33908:30120:0830/042628.262:VERBOSE1:crash_reporter.cc(121)] Crash handler launched and ready.
+[33908:30120:0830/042628.262:VERBOSE1:crash_client.cc(106)] Found 0 completed crash reports
+[33908:30120:0830/042628.262:VERBOSE1:crash_client.cc(124)] Found 0 pending crash reports
+[33908:30120:0830/042628.262:VERBOSE2:update_usage_stats_task_win.cc(57)] No app enables usagestats.
+[33908:30120:0830/042628.262:VERBOSE2:update_usage_stats_task_win.cc(52)] usagestats enabled by app {8A69D345-D564-463C-AFF1-A69D9E530F96}
+[33908:30120:0830/042628.266:VERBOSE1:updater.cc(101)] Crash reporting initialized.
+[33908:30120:0830/042628.269:VERBOSE1:updater.cc(156)] IsUserAdmin: 1, IsUserNonElevatedAdmin: 0, IsUACOn: 1, IsElevatedWithUACOn: 1, LUA: 1
+[33908:27696:0830/042628.278:VERBOSE2:service_main.cc(165)] Running COM server within the Windows Service
+[33908:27696:0830/042628.280:VERBOSE2:app_server.cc(57)]

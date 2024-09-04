@@ -1,0 +1,9 @@
+.main{
+    height: 29px;
+    background-color: rgb(81, 81, 81);
+    border-radius: 8px;
+    color: #F6D265;
+    width: 100%;
+    font-family: cursive;
+    font-size: 12px;
+}
