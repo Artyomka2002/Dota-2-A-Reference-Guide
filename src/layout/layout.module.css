@@ -25,9 +25,10 @@
     display: flex;
     background-color: #1d1f24;
     align-items: center;
-    padding: 0 12px;
-    justify-content: space-around;
+    padding: 0 50px;
+    justify-content: space-between;
     color: #F6D265;
+    
     border-bottom: solid 1px #6c7385;
 }
 
@@ -42,8 +43,7 @@
 }
 
 .headerText {
-    width: 50%;
-    margin-left: 40px
+    /* margin-left: 40px */
 }
 
 .headerLeftContent {
@@ -56,7 +56,6 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 50%;
 }
 
 .footerLink {

@@ -19,7 +19,7 @@ const BoxRightContent = ({ dataSorce, id }) => {
   return (
     <>
       <div className={cl.rightInfo}>
-        <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "20px",alignItems:'center'}}>
           <h2 className={cl.h2Attr}>Основные характеристики героя</h2>
           <div className={cl.blockLeftMainInfo}>
             <div className={cl.contSpan}>

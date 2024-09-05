@@ -110,7 +110,6 @@
 
 .mainTwo {
   text-align: center;
-  padding: 0 0 0 10px;
 }
 
 .spanTitle {
@@ -134,6 +133,7 @@
 
 .attrHerosSpan {
   font-size: 25px;
+  margin-bottom: 25px;
   color: #5c5c5c;
   font-family: cursive;
 }
@@ -162,7 +162,7 @@
 
 .HeatManaContainer {
   display: flex;
-  margin-top: 20PX;
+  margin-top: 20px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -203,4 +203,44 @@
   display: flex;
   justify-content: center;
   gap: 20px;
+  height: 50px;
+  align-items: center;
+}
+.buttonContainer > span {
+  border-left: solid 1px;
+  border-right: solid 1px;
+  padding: 15px;
+  color: #ffb648;
+  font-family: monospaceF;
+}
+
+@media (max-width: 1150px) {
+  .rightInfo {
+    border: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .blockLeftMainInfo,
+  .Health,
+  .Manapul {
+    width: 340px;
+  }
+  .contSpan,
+  .attrOne {
+    font-size: 14px;
+    gap: 2px;
+  }
+  .containerTopImg > label {
+    font-size: 14px;
+  }
+  .attrHerosSpan,
+  .h2AttrF {
+    font-size: 22px;
+  }
+.buttonContainer > * {
+ font-size: 10px; 
+}
+}
+@media (max-width: 450px) {
 }

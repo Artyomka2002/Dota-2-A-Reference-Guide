@@ -1,50 +1,60 @@
 .iconHeroes {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: space-between;
-    padding: 0px 40px 20px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-between;
+  padding: 0px 40px 20px 40px;
+  gap: 5px;
+  word-break: break-all;
 }
 
 .iconHeroes::after {
-    content: '';
-    flex: auto;
+  content: "";
+  flex: auto;
 }
 
 .nameHeroes {
-    word-break: break-word;
-    width: 100px;
-    color: azure;
-    font-family: monospace;
-    color: #F6D265;
-
+  word-break: break-word;
+  width: 100px;
+  color: azure;
+  font-family: monospace;
+  color: #f6d265;
 }
 .imgHeroes {
-    height: 120px;
-    width: 80px;
-    opacity: 0.8;
-    border-radius: 30px;
-    border: solid 4px #F6D265;
-    margin-bottom: 2px;
+  height: 120px;
+  width: 80px;
+  opacity: 0.8;
+  border-radius: 30px;
+  border: solid 2px #f6d265;
+  margin-bottom: 2px;
 }
 
 .imgHeroes:hover {
-    width: 90px;
-    transition: 0.5s;
-    transform: translate(0, -1px);
-    opacity: 1;
+  width: 90px;
+  transition: 0.5s;
+  transform: translate(0, -1px);
+  opacity: 1;
 }
 
-@media(max-width:500px) {
-    .iconHeroes {
-        padding: 0 30px;
-    }
-
+.heroItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
 }
 
-@media(max-width:400px) {
-    .iconHeroes {
-        padding: 0 22px;
-    }
+.heroItem > a {
+  text-decoration: none;
+  color: #f6d265;
+}
+@media (max-width: 500px) {
+  .iconHeroes {
+    padding: 0 30px;
+  }
 }
 
+@media (max-width: 400px) {
+  .iconHeroes {
+    padding: 0 20px;
+  }
+}

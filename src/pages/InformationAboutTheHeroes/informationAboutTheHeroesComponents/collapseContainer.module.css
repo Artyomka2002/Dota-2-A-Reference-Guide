@@ -66,6 +66,12 @@
     .colapseContainer {
         padding: 0;
     }
+    .GrInfo {
+        width: 100%;
+    }
+    .GrInfo>div{
+        width: 100%;
+    }
 }
 
 @media(max-width:860px) {
