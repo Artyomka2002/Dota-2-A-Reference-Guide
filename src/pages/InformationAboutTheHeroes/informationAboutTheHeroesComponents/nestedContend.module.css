@@ -81,9 +81,7 @@
     .contInfoRight {
         font-size: 18px;
     }
-    .conteinerInfoLeft{
-        padding-left:0;
-    }
+   
 }
 
 
@@ -103,5 +101,8 @@
   
     .contInfoRight {
         font-size: 25px;
+    }
+    .conteinerInfoLeft{
+        padding-left:0;
     }
 }
