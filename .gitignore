@@ -1,6 +1,6 @@
 # Ignore directories
 /node_modules
-/dist
+# /dist
 
 # Logs
 logs
