@@ -5,12 +5,14 @@ import react from "@vitejs/plugin-react-swc";
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Dota-2-A-Reference-Guide/', // Убедитесь, что путь правильный
+  base: '/Dota-2-A-Reference-Guide/', // Проверьте правильность пути
   build: {
-    outDir: "dist", // Убедитесь, что выходная директория правильная
+    outDir: 'dist',
     rollupOptions: {
       output: {
-        // Ваши другие настройки здесь
+        entryFileNames: '[name].js', // Убедитесь, что все файлы имеют расширение .js
+        chunkFileNames: '[name].js',
+        assetFileNames: '[name].[ext]',
       },
     },
   },

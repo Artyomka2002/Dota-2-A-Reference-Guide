@@ -1,7 +1,7 @@
 # Ignore directories
 /node_modules
 # /dist
-
+/Gendannet
 # Logs
 logs
 *.log
