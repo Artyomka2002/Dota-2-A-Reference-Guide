@@ -1,427 +1,0 @@
-var __assign,__spreadArray,BingAtWork;(function(n){var t,i,r;(function(n){n[n.Person=0]="Person";n[n.Task=1]="Task";n[n.File=2]="File";n[n.Group=3]="Group";n[n.Buildings=4]="Buildings";n[n.Email=5]="Email";n[n.PowerBi=7]="PowerBi";n[n.Bookmark=8]="Bookmark";n[n.RefQnaV2=9]="RefQnaV2";n[n.Explore=10]="Explore";n[n.Conversation=11]="Conversation";n[n.Site=12]="Site";n[n.BuildingsV2=13]="BuildingsV2"})(t=n.ScopeDomain||(n.ScopeDomain={})),function(n){n[n.None=0]="None";n[n.Suppress=1]="Suppress";n[n.BingAtWorkRequery=2]="BingAtWorkRequery";n[n.SerpRequery=3]="SerpRequery";n[n.Upsell=4]="Upsell"}(i=n.QueryBehavior||(n.QueryBehavior={})),function(n){n[n.None=0]="None";n[n.OrgChart=1]="OrgChart";n[n.Email=2]="Email";n[n.Office=3]="Office";n[n.Phone=4]="Phone";n[n.Title=5]="Title";n[n.Department=6]="Department";n[n.Group=7]="Group";n[n.GroupMembers=8]="GroupMembers";n[n.GroupFiles=9]="GroupFiles";n[n.GroupConversations=10]="GroupConversations";n[n.Building=11]="Building";n[n.PersonDocs=12]="PersonDocs";n[n.Alias=13]="Alias";n[n.AllResults=14]="AllResults";n[n.OrgRelation=15]="OrgRelation";n[n.Conversation=16]="Conversation";n[n.TechHelp=17]="TechHelp"}(r=n.QueryIntent||(n.QueryIntent={}))})(BingAtWork||(BingAtWork={})),function(n){var t;(function(n){function t(){return!!("sessionStorage"in _w&&_w.sessionStorage)}function i(n,i){if(t())try{sessionStorage.setItem(n,i)}catch(r){}}function r(n){if(t())try{var i=sessionStorage.getItem(n);return i===null?undefined:i}catch(r){}return undefined}function u(n){if(t())try{sessionStorage.removeItem(n)}catch(i){}}function f(){if(t())try{sessionStorage.clear()}catch(n){}}n.isSupported=t;n.setItem=i;n.getItem=r;n.removeItem=u;n.clear=f})(t=n.SessionStorage||(n.SessionStorage={}))}(BingAtWork||(BingAtWork={}));__assign=this&&this.__assign||function(){return __assign=Object.assign||function(n){for(var t,r,i=1,u=arguments.length;i<u;i++){t=arguments[i];for(r in t)Object.prototype.hasOwnProperty.call(t,r)&&(n[r]=t[r])}return n},__assign.apply(this,arguments)},function(n){function rt(n,t){var i={},r=n.flights,u;r&&r.length>0&&(i.variants=r.join());for(u in t)i[u]=t[u];return i}function ut(n,t){var i,r;if(t)for(i in t)r=n.indexOf("?")>-1?"&":"?",n+="".concat(r).concat(encodeURIComponent(i),"=").concat(encodeURIComponent(t[i]));return n}function ft(n){var t=7;switch(n){case 500:t=6;break;case 404:t=9;break;case 401:t=4;break;case 504:t=5;break;case 400:t=8}return t}function et(n){for(var r,t,f,u=[],i=1;i<arguments.length;i++)u[i-1]=arguments[i];if(!n)return n;for(r=n,t=0;t<u.length;t++)f=new RegExp("\\{".concat(t,"\\}"),"gm"),r=r.replace(f,arguments[t+1]);return r}function ot(t,i){try{return JSON.parse(t)}catch(r){return null}}function st(n,t,i){var r,u;for(i===void 0&&(i=7),r=n,u=0;r&&u<i;u++){if(r===t)return!0;r=r.parentElement}return!1}function ht(n){n!=null&&n.parentNode!=null&&n.parentNode.removeChild(n)}function c(n,t,i,r,u){r===void 0&&(r=0);n()||(t>1?setTimeout(function(){return c(n,t-1,i,r,u)},i+r):u&&u())}function o(n){if(typeof bfbTel!="undefined"&&bfbTel){n();return}sj_evt.bind("bfbWebTelemetryExists",n,!0,undefined,!0)}function ct(t){if(typeof n.Strings!="undefined"&&n.Strings){t();return}sj_evt.bind("BingAtWork:LocStrings",t,!0,null,!0)}function r(){try{return!!("localStorage"in _w&&_w.localStorage)}catch(n){return!1}}function l(t){var i=a(t);if(i){var u=s(t),r=i.cacheExpiryNum,f=i.cacheValueStr;if(!r||window.isNaN(r)||r<(new Date).getTime())h(u);else try{return JSON.parse(f)}catch(e){h(u)}}return undefined}function a(n){var r=s(n),t=wt(r);if(t){var i=t.split(";",2),u=i[0],f=i[1],e=Number(u);return{cacheValueStr:f,cacheExpiryNum:e}}return undefined}function lt(t,i,u,f,e,o,s){var c,h,v,y;if(o===void 0&&(o=!1),s===void 0&&(s=!1),!r())return i({onSuccess:function(){for(var t=[],n=0;n<arguments.length;n++)t[n]=arguments[n];u.onSuccess.apply(u,t);f.onSuccess.apply(f,t)},onError:function(){for(var t=[],n=0;n<arguments.length;n++)t[n]=arguments[n];u.onError.apply(u,t);f.onError.apply(f,t)}});if(n._isEventBind||(n._isEventBind=!0,sj_evt.bind("ajax.unload",function(){n._localStorageAutoRefreshHandlersBacklog={};n._localStorageOneOffHandlersBacklog={}},!0,null,!0)),n._localStoragePendingAutoRefreshes=n._localStoragePendingAutoRefreshes||{},n._localStorageAutoRefreshHandlersBacklog=n._localStorageAutoRefreshHandlersBacklog||{},n._localStorageOneOffHandlersBacklog=n._localStorageOneOffHandlersBacklog||{},u){if(n._localStorageAutoRefreshHandlersBacklog[t]&&n._localStorageAutoRefreshHandlersBacklog[t].length>0){n._localStorageAutoRefreshHandlersBacklog[t].push(u);return}n._localStorageAutoRefreshHandlersBacklog[t]=[u]}if(f){if(n._localStorageOneOffHandlersBacklog[t]&&n._localStorageOneOffHandlersBacklog[t].length>0){n._localStorageOneOffHandlersBacklog[t].push(f);return}n._localStorageOneOffHandlersBacklog[t]=[f]}if(c=l(t),c!=null&&!s){h=a(t);v=new Date(h===null||h===void 0?void 0:h.cacheExpiryNum);w(t,c,v,!0,i,e,o,!0);return}s;y=p(t,i,e,o);i(y)}function p(t,r,u,f){var e=s(t);return{onSuccess:function(i){var o=u&&u(i);o&&(w(t,i,o,!1,r,u,f),setTimeout(function(){return k(e,"".concat(o.getTime(),";").concat(JSON.stringify(i)))},0))},onError:function(){for(var u=[],r=0;r<arguments.length;r++)u[r]=arguments[r];i(n._localStorageAutoRefreshHandlersBacklog[t],function(n){n.onError&&n.onError.apply(n,u)});i(n._localStorageOneOffHandlersBacklog[t],function(n){n.onError&&n.onError.apply(n,u)});f||(n._localStorageAutoRefreshHandlersBacklog[t]=[]);n._localStorageOneOffHandlersBacklog[t]=[]}}}function s(t){return"".concat(n.localStorageCacheKeyPrefix).concat(t)}function w(t,r,u,f,e,o,s,h){if(i(n._localStorageAutoRefreshHandlersBacklog[t],function(n){n.onSuccess(r,undefined,h)}),s||(n._localStorageAutoRefreshHandlersBacklog[t]=[]),i(n._localStorageOneOffHandlersBacklog[t],function(n){n.onSuccess(r,undefined,h)}),n._localStorageOneOffHandlersBacklog[t]=[],s&&!n._localStoragePendingAutoRefreshes[t]){var c=Math.max(u.getTime()-(new Date).getTime()+v,f?y:0);n._localStoragePendingAutoRefreshes[t]=!0;setTimeout(function(){var i=p(t,e,o,s);e(i);n._localStoragePendingAutoRefreshes[t]=!1},c)}}function at(t,i,r){var u,f;return(r===void 0&&(r=";"),!((f=(u=n.SessionStorage)===null||u===void 0?void 0:u.isSupported)===null||f===void 0?void 0:f.call(u)))?undefined:vt(n.SessionStorage.getItem(t),i,r)}function vt(n,t,i){if(i===void 0&&(i=";"),!n)return undefined;var u=n.split(i,2),f=u[0],e=u[1],r=Number(f);return!r||window.isNaN(r)||r<=(new Date).getTime()-t?undefined:e}function yt(t,i,r){var u,f;(r===void 0&&(r=";"),(f=(u=n.SessionStorage)===null||u===void 0?void 0:u.isSupported)===null||f===void 0?void 0:f.call(u))&&n.SessionStorage.setItem(t,"".concat((new Date).getTime()).concat(r).concat(i))}function pt(t){try{sessionStorage.removeItem(t)}catch(i){}}function i(n,t){if(n)for(var i=0;i<n.length;i++)t(n[i])}function t(n,t){if(!n)return!1;for(var i=0;i<n.length;i++)if(n[i]===t)return!0;return!1}function b(){var n=function(){return Math.floor((1+Math.random())*65536).toString(16).substring(1)};return n()+n()+"-"+n()+"-"+n()+"-"+n()+"-"+n()+n()+n()}function k(n,t){if(r())try{localStorage.setItem(n,t)}catch(i){}}function wt(n){if(r())try{var t=localStorage.getItem(n);return t===null?undefined:t}catch(i){}return undefined}function h(t){if(r())try{localStorage.removeItem(t)}catch(i){}}function d(t){var c=t.condition,l=t.maxAttempts,u=t.baseIntervalInMillis,r=t.logName,e=t.callback,f=t.additionalIntervalPerAttemptInMillis,i=t.currentAttempt,s=t.timeOutCallback,h;f=f||0;i=i||0;c()?e!=null&&e():(i++,i<l?(h=__assign(__assign({},t),{baseIntervalInMillis:u+f,currentAttempt:i}),setTimeout(function(){return d(h)},u)):(o(function(){return bfbTel.logDiag("".concat(r,"_TimedOut"))}),s!=null&&s()))}function bt(t,i,r,u,f){for(var s,c,a,y,l=[],h=5;h<arguments.length;h++)l[h-5]=arguments[h];s=new Date;n._throttleRecords||(n._throttleRecords={});c=f.id;c||(c=f.id=b());try{a=JSON.stringify(r)}catch(p){return}var v=f.name||"(anonymous)",o="".concat(v,"_").concat(c,"_").concat(a),e=n._throttleRecords[o];if(e){if(e.totalCalls++,e.clusterCalls++,e.clusterCalls>t)if(y=s.getTime()-e.lastRunTime.getTime(),y>=i)e.clusterCalls=1,e.clusters++;else return e.throttledCalls++,e.‰PNG
-
-   IHDR   H   H   Uí³G   sRGB ®Îé   DeXIfMM *    ‡i                            H        H    1Fï  IDATxíœkŒçyÇÿ3gæÜöËÍ`—bnMì æ’ØNˆİ8qä4[«ªµUÔª_°zÉ‡¶òEıP5R#µ"9n>DU*9¨­’ª¢2®mH“€S ¸`'Ğn»À²»ç~Îœ3Óß3»Ç^sà9x·ò+½gnï¼ïóüç¹¾ïœ‘Ş/ï#ğnp®õæ(ŠœgyÆyê©§´k×.gÑ¢E×|ïµq-í.^¼Y»Ç{Ì¶ñ¾ã8ñöZî¿Ş6]™ls×]w9+W®t/\¸à–J%whhÈM§ÓN¡PèÚÇõõNí#ÀQ.—ûûûCöCRøÀ„´z’÷NÄÌ<gRsÿı÷»Õj5Õh4ú|ğÁ'S©Ôã´df»›¹_¯×ß<räÈöS§NU<Ø<yòdÈƒ{’Û‰1““‡v™7>ãyŞÎ÷£7‚µwß}÷~$hhll,Í©jï½v=ÉÒ “S+TÊ‡¨*õI~£}…a¨f³¹zÛ¶mßëëë¢ŸÔ 3Èfsòù¼89$gÑ2•ô}H‹PùÕ6lØ·`Á‚Ô óVf!Äç‰e“fòFû3pLŠ¬"Ù«¶lÙ²·W uÈ\¹y+$(…í11Å j—iuëH2"Ì•ó”Ì š¡Å jW#Èö{%I]²8·îğ¤º¶½YèµÁ¹r‹)XµyóæDÕmÖ0}=à^	ÌÌã¤AúE ¹jÓ¦M‰HÒœ¨-qˆ•™R”$Hs ¶›7pl¿]fV«ÕVİ{ï½ïJ’æ,@m‰1pl¿X{¿}İÔíİ€4'rİ·É6 ¬´iïÇ'ù1àL’È#÷.[¶lS×•–tÍæÛÍ¦m6›U¹\Iš	¸ò˜ôè-Ö­[·&÷qï$‘·!KóHfŞ~Öû)"I5ÆbŠ¯fƒŒù™•Y‰U€´€²L‘x¯¼òJWşç¤*’Õ(«‘À÷LºµØÆnWë§+‚W»q.ŸoµZ6uã“kº–wâeÎJP'¦º]C53¨™‡±ï* ]t¬××£¨…™2ÈI@&)l’k3úİ¥ú×±L$äŸèÄÇu]Ã¨»¾ï»,t½oÖJP+*EÿŸrÂï+
-ueæZ A±Ô\ËŠÌì(ªÉ)p^“ÊMÉ­K•ç¤ÂµbX»Y	PTş6À1'\åx'•şƒ·gC¡CG³ ¨qB*ü“TœèX"J­%§¹ïÀNò—zPı2ÿÊ¯ñÉOî–“ÂkHåZVc $§ò-E•—“Gâ*=ö Â)ißo©ubÃÏğ¦ÕâX<Ô%jNÊ™xQ*asm ©‰µØšªÙ¾¸6ñ· xğŠ»{sØ3€¢ñŸIÿş»0ó#˜…©é½ùé{;Õ¬ŒµO½µ‡1Êç¥*àÔ­¢fÕ6HlØ#§$]ú
-û§5x-¤´G¥7 9»ÿXıi’ùšâ9˜½ô¬œ—şFÑØ„"÷—ÙÜ
-^Ë© )U$†J?vŸZ€Ô4i2IBİÔÔ¸4öw`?	>Ï¡†É“m¼{(Fû¾&çgûaµj9JUá'å}Iòúˆ]ÓJíRKã¯5tù¿ªØ
-Ë•¼¤ù+ßĞ‚µÇ”_¤¹€›^u²Æá¹âÙ”zMNé »¡rã_—3¼““}æ‰ı±œ}ßœbÂƒX^İq.È©?+-áØÍaò
-/Õÿ¾0O?ÿö„Zç]¥"›¼
-!¹]$:ùò§•>§ß­;>ı¢R9Ô4„\ RH½„4ùõ=jf¶#¥{¤ÜGåä6ÇÀ'õ“,ÜFÕ¾o!50ŒÔ&µÁ0%j‰P›ì¸Z¿¬³ÿò¢
-gój ‹w›Jû¡2^+ŞÖ//Ñáømíûê—´<Òˆº™=2cWhãåUßPdËv„6ÿ“dI pìœœÃ¯ İ0OÜ€2€ì\…ı
-TZÊº§µí³¦[îyAu?£6©îy`ê’zÑNúo™Ô~u/R•×áç?§ÆÓ8æÉ ¤©­œU*l(ªÅhŸH¨H²ÇMLÂ` 2qüb3
-Æp–š2Cƒq„Œ¤äÎiË?Ñ™5èø¡ßÑÄÈZjÉ³#Õ,)…D}âÉg5yf>öº_é‹.ã¨ÁpdßMÙÄ=ÛtÛ~”7™V'ÆU¢ EÇ!Î$'+óĞÔÎ¥©`F¶Êõ*^
-7îúe-¿ıy-[ù:uú:¸çÔ}˜¤ £cÿú)U	™>ü‡dõM¦P‹nìèb¦’m3 ÔtÑàãŒËşÌ¸Ëh¹Á’@QĞsúçˆ>Ôš¤Ø#­Ñ½‡=r86açP!ÍÇ+-ÄÍ{ Å¡|G³ …Ñ[UFÕ¼4±·(l)Ì5ôæŞmºuÃµ|óä¤Y”(1F z»?æ‚¾lì&±Q«ÓûÅ0‚–×]’¨—9;‘PŒ-‰àXFÑ1GÎj¤epÌ·»0™GÊil|¥.—îP¥±HçÏlÔOR)/C$Ë1h‹Çj¾ïÛ¤Ûî<$×Å:ÕEŸk\7ÎÑ/`Šv7NVÒ@«g@¼Ğ%‚5{MĞŞ”™~3×¹Ä/r<ˆª­¥.­ëÂÈí9ğ{:y~»êÑ"ÔÉ—Ç$_[‚0É³Ø)Ø¸½@§_ÿeã´ Š<Õû@	p <ÊÓ/ÁdÄspØ™«×-2WÜ˜µZÄ;¥4†0bÀÖÄƒ›/¿µ¡Ñ‘åúÆ?ïÔ¹Òò‚ù——Á®{Øï”|ìHš[<ìXŠêpè*LdÔ è†x*t` ›“Èt¡Ä>UÙ÷ Ì¢í„Jb EH@³5,?ÀË´_6¥	J^S­J¨½Ç>¢g^ÆææÇ¨	 ¾#$È±ğF>Ñ±¨)
-5E’êÔ±g–Q Æ
-P q•ÓÀè§™dK)ŠWt+¡’@N&£zn™ò•SØXŒè:–ˆE]bû3šQ>]P@²ÙÂ^ÄAA¡ã¦c€îI·ˆ¨‘ sA­fS© •©ºeá¨Ò–—è€ÂI?V­T?.“o¹‚„ô¼¸¿„ğ‰}@"}yy_ÁÒH	o$ò”Í«´«íÓú7”îŸ$Y¯ò–jIõF‘÷yJªÅûÓÛ Ìu®ÅÛŠjdö+~‰ûl
-`„ºÅ€“°Z\…í‰8D+µLn‚¯SÂE2ÅÅ£8÷¬ÆbX°#océFÃˆ§V2ºmt\­ùA<Õ’’D¬±‡•¢‚z­ Æt­×¸"YKUùü˜Ö¯ø/ip.û
-qóîÂ1,¢ƒ†	Ûâ1-j×`ô+¡’@FOfÛ*]¨c,q±Mˆ´T£-AqŒX—²z´¹_[v›Åğµ†ÜÓ#Å’Âr‘y"@jV¯b¾êzhİn-Ö¨t‘@³æï–ğp€ƒÍ‰Á8§Q«ÄxïJš©n¨oımj}p­*‡§©Ie`Yõ•aã÷ıÓîS†¸& ¨&¹U‹Èº:UQ¥^qÀŸĞã«wiË “nã¨Æ\)€¤8t(³¥6Gú•ªøjôİ.éšD‚âäJŠ¹Ü?¬ÂüDN_Yù~ävf¨ccÍ–\-KÜò¸·W›çıT?¨@§šKÈ@²¨M¨yéªîÊœÖÖş£Z¾„êğı¦ğöS³iqï «ædVá¥>âNöïü„r>j˜`I £kà3wëÂÖ5*$õpG•ÍÂŞÌ±
-K3ã	x‹€1°«¼óZ•=vi2zr0’Õlœ -61f‰V@œ@Ï‹0ZU=5Fç“gUYºRş·&ÍTW‰”íÏ©ÿÏVñ±S
-Fšš·d\9@ŠH«qú ƒ”í›A7`HCò)âN©Y¶|n‘t\9gç¹¬;TóbÕ±ùœëSm0­Ö¯|^üŒÉ¨K¾l­ü;ÕòR±œ â–ãÅ† ÚŞ-¶S¨ö)®dóm{5u¶šfâ-œğUşÉ°Z#óäW}Õî{Hƒë?”<#ôÈˆ½)ÃO|’
-1Û÷ïk|ÄUu°¢yóò=‹“-… ’²;.RÂ4†lkjgcû&1qEÒlk…kA!­ÒØ0ÒØ§\Ÿ¯‰[Ôÿø£ôÕn4Õ4©ß”Íe´ø/Õ(S> Õ&R©TÕ?Øàõ¹&@1qÏD|d‚Ø40(Ï4XÆâ4hì5	4Ë“yU/b¯sü‡ÄÓøg7iè‰_WµîUé@F°Ù£Eõy-÷µ½¤¾&Çj*Mf›Ê’™zØ#äØ|‘eÉ&û!¹\5¬W3ªÉÛ‚¬òxºf.­â—>¢¡?ıTOÁ1z
-G’rñl¿]õ¿~A™Ä>g‰u*pİLÖÛìaÊ·y )mŠW™‘˜Ğ‚Mvª•VT–ªlY.ïË;tËCëÀ˜P#û­Òs€l$³Kw¬SqãrM|÷ˆêÿxP©#gÔWf¢;°Ä²Îea—ùìsJY’W—m-ç©zÏmÒo®×Ğç>¤Á…¤37©Ü€Ú¼ÌçÍÔ/~TÅ_Û ò¡3ª"M­C§åœ“;ZTªd~+Ô—V°¸_ÁÊ…r‰ÎÓÛW(¿i¹l’ìæ–›
-P›µş>Üw¯tß¡R¹Ê{55JLkØÒ2Å%"÷û2¬°SõõÎ ·éé´}O šIPÀ{ÂLz®Üï½•»rÄ9vü>@]Øû ½[€ì£"¼ºñR:«)!3òs»Æ‹ñd¼uã¦«ñ'Ùˆ—®íÃ!­b±øb·gûuãÁx1Œ·nôvôbÓßê	ù¨€uØØ¿ÿs[·nMó/›óWñ¡nÏ¦ëHÌ$à¼|àÀçøŠDƒÿÙ³hb3ş–ğ]½tLy×Æİ½{7KTaŞ a ?Ìñbšã:ËX7!Ş¿:ı]¯@£I ÍUhäø2¼Œ`W~øá€ëÔ;–Ä×_ôÈ#„üù,Èd26@üª;ƒ4¨¶øí1pW5}Ç‘oÒIcZ›ÔµD- ZUşËğe›ĞxìTºIcßåa¦Î€Ì –ö?«èçx
-öÁ:öÑiğ›q@"LDšh&GnT1¬¤©Î‡[š|ê«ã‡™:J¼GO?ıtÄ¨ZüuĞë¼üe¢jTìƒ'‚PÙšòì- cŸï2ƒÜâá&9 ğ©¯Ö«¯¾ÚõÓ^]™ã8ö¡¥÷úf7úÌ•N499ûlñâÅf2Â×_=âûH]ú?Tjí ÚÄ0    IEND®B`‚                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              rray.isArray(n)?n.map(i):Object.keys(n).reduce(function(t,r){var u="".concat(r[0].toUpperCase()).concat(r.slice(1));return t[u]=typeof n[r]=="object"?i(n[r]):n[r],t},{})}function s(){return typeof window=="undefined"||!window.navigator||!window.navigator.userAgent?!1:window.navigator.userAgent.indexOf("PhantomJS")>-1}var t=n.context&&n.context,u=t===null||t===void 0?void 0:t.isThrottlingEnabled,f=(t===null||t===void 0?void 0:t.wsb)||(t===null||t===void 0?void 0:t.miniSerp),e=t===null||t===void 0?void 0:t.miniSerp;n.sendAjax=o}(BingAtWork||(BingAtWork={}));BingAtWork.Wsb=BingAtWork.Wsb||{};BingAtWork.Wsb.sendAjax=function(n,t,i){return BingAtWork.sendAjax(n,i,t)},function(n){var t;(function(t){function i(t,i,r){var u=n.getRequestMetadata(t,r);return n.mergeArgsIntoUrl(i,u)}function r(t,i,r,u,f,e,o){var s={url:t,accessToken:e,requestType:"POST",body:JSON.stringify(i),timeout:u,headers:f,onSuccess:r.onSuccess,onError:r.onError};n.augmentMsbMtAjax(s,"caller: sendPostRequest, file: ServiceHelpers");n.sendAjax(s,"caller: sendPostRequest, file: ServiceHelpers",o)}t.addArgsToUrl=i;t.sendPostRequest=r})(t=n.Service||(n.Service={}))}(BingAtWork||(BingAtWork={}));__assign=this&&this.__assign||function(){return __assign=Object.assign||function(n){for(var t,r,i=1,u=arguments.length;i<u;i++){t=arguments[i];for(r in t)Object.prototype.hasOwnProperty.call(t,r)&&(n[r]=t[r])}return n},__assign.apply(this,arguments)},function(n){var t;(function(n){var t=function(){function t(n){this.config=n;this.tokenApiUrl="".concat(n.apiUriBase,"/v3/user/token")}return t.prototype.getToken=function(t,i,r){var o=n.addArgsToUrl(this.config,"".concat(this.tokenApiUrl,"/").concat(r),{}),u=i!==null&&i!==void 0?i:{},f=u.onSuccess,e=u.onError,s=__assign(__assign({},i),{onSuccess:function(n){n?f&&f(n):e&&e(10,-1)}});n.sendPostRequest(o,t,s)},t}();n.TokenClient=t})(t=n.Service||(n.Service={}))}(BingAtWork||(BingAtWork={})),function(n){var t;(function(t){var i;(function(t){function c(n){var t=n&&n.AnswerEntityRequests&&n.AnswerEntityRequests[0];return t&&t.Query&&t.Query.QueryString}function l(n){return n&&n.AnswerEntitySets&&n.AnswerEntitySets[0]}function a(n){var r,u,e,t,i;return f(n)?(i=n,((e=i===null||i===void 0?void 0:i.Ranking)===null||e===void 0?void 0:e.Placement)||"Suppress"):(t=n,((u=(r=t===null||t===void 0?void 0:t.WholePageRankings)===null||r===void 0?void 0:r[0])===null||u===void 0?void 0:u.Placement)||"Suppress")}function v(n){var t,i,r=p(n);if((i=(t=r===null||r===void 0?void 0:r.EntityCards)===null||t===void 0?void 0:t[0])!==null&&i!==void 0)return i.CardType}function y(n){var t=n&&n.AnswerEntitySets;if(t)return t.some(function(n){return n.ResultSets&&n.ResultSets.some(function(n){return n.Results&&n.Results.some(function(n){return!!n.Source&&!!n.Source.powerApp})})})}function p(n){var i,t,r;return f(n)?(r=n,r.Ranking):(t=n,(i=t===null||t===void 0?void 0:t.WholePageRankings)===null||i===void 0?void 0:i[0])}function f(n){return!!n&&!("EntitySets"in n)}var i=n.context,e=i.isSubstratePeriodicWarmup,o=i.tenantId,r=i.uiCulture,s=i.isBingSpellerEnabled,u=i.isNew3sSdkEnabled,h=function(){function t(n,t){this.substrateSearchCfg=n;this.getSubstrateToken=t;this.isPrimed=!1}return t.prototype.search=function(n,t,i,r,u){var f=this;this.substrateSearchCfg.is3sPrimingEnabled&&this.primeConnection();this.getSubstrateToken(undefined,{onSuccess:function(e){return f.searchImpl(e.token,n,t,i,r,u)},onError:t.onError})},t.prototype.searchResolveEntitiesAsync=function(n,t,i,r,u){var f=this;this.getSubstrateToken(undefined,{onSuccess:function(e){return f.searchResolveEntitiesAsyncImpl(e.token,n,t,i,r,u)},onError:t.onError})},t.prototype.warmUp=function(t,i,r,u){var o=this,f;this.substrateSearchCfg.is3sPrimingEnabled&&this.primeConnection();f={onSuccess:function(n){return o.warmUpImpl(n.token,t,i,r,u)},onError:function(t,i,r){return sj_evt.fire("bfbSubstrateWarmupFailed",t,i,r,n.getFailedEventDetails(t,i))}};e?this.getSubstrateToken(f):this.getSubstrateToken(undefined,f)},t.prototype.searchImpl=function(t,i,r,u,f,e){var o,s,v=this.substrateSearchCfg.substrateApiUri,h=n.mergeArgsIntoUrl(v.concat("/v2/query"),e),c=this.getHeader(t,"POST",f),l,a;if(sj_evt.fire(u,n.getStartedEventDetails()),l=n.context.isCachingSubstrateResponseEnabled,a=(s=(o=n===null||n===void 0?void 0:n.Service)===null||o===void 0?void 0:o.Midgard)===null||s===void 0?void 0:s.getSubstrateUnifiedResponseInSession(),l&&a){r.onSuccess(a,undefined,{url:h,token:t,headers:c,request:i},!0);return}this.sendRequest(h,i,{onSuccess:function(u,f){var e,o;l&&((o=(e=n===null||n===void 0?void 0:n.Service)===null||e===void 0?void 0:e.Midgard)===null||o===void 0?void 0:o.saveSubstrateUnifiedResponseInSession(u));r.onSuccess(u,f,{url:h,token:t,headers:c,request:i},!1)},onError:r.onError},null,t,c)},t.prototype.searchResolveEntitiesAsyncImpl=function(t,i,r,u,f,e){var o=this.substrateSearchCfg.substrateApiUri,s=n.mergeArgsIntoUrl(o.concat("/v1/resolveEntitiesAsync"),e),h=this.getHeader(t,"POST",f);sj_evt.fire(u,n.getStartedEventDetails());this.sendRequest(s,i,r,null,t,h)},t.prototype.getHeader=function(t,i,f,e){var h,c,l;if(i===void 0&&(i="POST"),h={},!this.anchorMailboxHeaderValue){var a=n.parseJwt(t),v=a.token,y=a.error,p=v&&v.puid;p?this.anchorMailboxHeaderValue="PUID:".concat(p,"@").concat(o):(c="SubstrateSearchClient: cannot add x-anchormailbox header. PUID is not available.",y&&(c+=" Error: ".concat(String(y))),n.whenWebTelemetryExists(function(){return bfbTel.logDiag(c)}))}if(this.anchorMailboxHeaderValue&&(h["x-anchormailbox"]=this.anchorMailboxHeaderValue,(u||e)&&(h["X-RoutingParameter-SessionKey"]=this.anchorMailboxHeaderValue)),i==="POST"&&(h["Content-Type"]="application/json"),f)for(l in f)h[l]=f[l];return s&&r&&(h["Accept-Language"]=r),h},t.prototype.primeConnection=function(){var i=this.substrateSearchCfg.substrateApiUri,n,t;this.isPrimed||(this.isPrimed=!0,n=_d.createElement("link"),n.rel="preconnect",n.href=i,n.crossOrigin="anonymous",_d.head.appendChild(n),t=_d.createElement("link"),t.rel="dns-prefetch",t.href=i,_d.head.appendChild(t))},t.prototype.warmUpImpl=function(t,i,r,f,e){var k=this,o=this.substrateSearchCfg,d=o.defaultScenario,c=o.personAutosuggestScenario,l=o.substrateApiUri,a=f||_G.IG,s=u||e?l.concat("/v2/init?cvid=".concat(a,"&setflight=querymicroservice")):l.concat("/v2/init?cvid=".concat(a)),h=this.getHeader(t,"GET",undefined,e),v=i("bfbSubstrateWarmup","bfbSubstrateWarmupFailed"),y,p,w,b;r&&r.length>0?r.forEach(function(i){var r="".concat(s,"&scenario=").concat(i);sj_evt.fire("bfbSubstrateWarmupStarted",n.getStartedEventDetails());k.sendRequest(r,{},v,null,t,h,"GET")}):(y=d,p="".concat(s,"&scenario=").concat(y),sj_evt.fire("bfbSubstrateWarmupStarted",n.getStartedEventDetails()),this.sendRequest(p,{},v,null,t,h,"GET"),n.isSubstrateWarmupV2DefaultStarted=!0);c&&(w="".concat(s,"&scenario=").concat(c),b=i("bfbSubstrateWarmupV2PersonSuggest","bfbSubstrateWarmupV2PersonSuggestFailed"),sj_evt.fire("bfbSubstrateWarmupV2PersonSuggestStarted",n.getStartedEventDetails()),this.sendRequest(w,{},b,null,t,h,"GET"),n.isSubstrateWarmupV2PersonSuggestStarted=!0)},t.prototype.sendRequest=function(t,i,r,u,f,e,o){o===void 0&&(o="POST");var s={url:t,accessToken:f,requestType:o,body:JSON.stringify(i),setJsonContentType:!0,timeout:u,headers:e,onSuccess:r.onSuccess,onError:r.onError};n.sendAjax(s,"caller: sendRequest, file: SubstrateSearchClient")},t}();t.SubstrateSearchClient=h;t.getRequestQuery=c;t.getFirstAnswerEntitySet=l;t.getRankingPlacement=a;t.getRankingCardType=v;t.containsPowerApp=y})(i=t.Midgard||(t.Midgard={}))})(t=n.Service||(n.Service={}))}(BingAtWork||(BingAtWork={}));__assign=this&&this.__assign||function(){return __assign=Object.assign||function(n){for(var t,r,i=1,u=arguments.length;i<u;i++){t=arguments[i];for(r in t)Object.prototype.hasOwnProperty.call(t,r)&&(n[r]=t[r])}return n},__assign.apply(this,arguments)},function(n){var t;(function(t){t.tenantSettingsAjaxBound=n.Service.tenantSettingsAjaxBound;t.SeverSideCachedVerticalConfigExpirationInSeconds=864e5;var i=n.context||{isCacheTenantSettingsEnabled:!1,isForceRefreshTenantSettingsEnabled:!1,isErrorBoundaryEnabled:!1,tenantId:""},r=i.isCacheTenantSettingsEnabled,f=i   BPLG   ¦“  ıT  9f20db571ddc0242   `  a       ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11-31.0.15.5222)           ŒŒ          ÿ       ÿ ÿ     ÿ                                                                ŒŒ  ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ                        ,              ,                    radii_selector       _uradii_selectorR‹                  corner_and_radius_outsets       _ucorner_and_radius_outsetsR‹                 aa_bloat_and_coverage       _uaa_bloat_and_coverageR‹                 radii_x	       _uradii_xR‹                 radii_y	       _uradii_yR‹                 skew       _uskewR‹                 translate_and_localrotate       _utranslate_and_localrotateP‹                 color       _ucolorR‹                  òÿÿÿÿ        ÿÿÿÿÿÿ                                    òÿÿÿÿ        ÿÿÿÿÿÿ                                    òÿÿÿÿ        ÿÿÿÿÿÿ                                    òÿÿÿÿ        ÿÿÿÿÿÿ                                    òÿÿÿÿ        ÿÿÿÿÿÿ                                    òÿÿÿÿ        ÿÿÿÿÿÿ                                          sk_RTAdjust
-       u_skRTFlip       urectUniform_S1_c0       urectUniform_S1_c1_c0       urectUniform_S1_c1_c1_c0       urectUniform_S1_c1_c1_c1_c0       _usk_RTAdjust       _uu_skRTFlip       _uurectUniform_S1_c0       _uurectUniform_S1_c1_c0       _uurectUniform_S1_c1_c1_c0       _uurectUniform_S1_c1_c1_c1_c0                                                                                                        sk_FragColor       _usk_FragColorR‹      ÿÿÿÿ                                                          Ş  ‚(  ió¡    ±                               ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       <                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ           ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ    ÿÿÿÿ           ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ   ÿÿÿÿ           ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ   ÿÿÿÿ           ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ   ÿÿÿÿ           ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ   ÿÿÿÿ                       Ş      struct VS_OUTPUT
-{
-    float4 dx_Position : SV_Position;
-    float4 gl_Position : TEXCOORD2;
-    float4 gl_FragCoord : TEXCOORD3;
-    noperspective float4 v0 : TEXCOORD0;
-    noperspective float2 v1 : TEXCOORD1;
-};
-#pragma warning( disable: 3556 3571 )
-float2 vec2_ctor(float x0, float x1)
-{
-    return float2(x0, x1);
-}
-float2x2 mat2_ctor(float2 x0, float2 x1)
-{
-    return float2x2(x0, x1);
-}
-float4 vec4_ctor(float2 x0, float x1, float x2)
-{
-    return float4(x0, x1, x2);
-}
-float4x4 mat4_ctor_float4_float4_float4_float4(float4 x0, float4 x1, float4 x2, float4 x3)
-{
-    return float4x4(x0, x1, x2, x3);
-}
-// Uniforms
-
-uniform float4 _sk_RTAdjust : register(c1);
-#ifdef ANGLE_ENABLE_LOOP_FLATTEN
-#define LOOP [loop]
-#define FLATTEN [flatten]
-#else
-#define LOOP
-#define FLATTEN
-#endif
-
-#define ATOMIC_COUNTER_ARRAY_STRIDE 4
-
-// Attributes
-static float4 _radii_selector = {0, 0, 0, 0};
-static float4 _corner_and_radius_outsets = {0, 0, 0, 0};
-static float4 _aa_bloat_and_coverage = {0, 0, 0, 0};
-static float4 _radii_x = {0, 0, 0, 0};
-static float4 _radii_y = {0, 0, 0, 0};
-static float4 _skew = {0, 0, 0, 0};
-static float2 _translate_and_localrotate = {0, 0};
-static float4 _color = {0, 0, 0, 0};
-
-static float4 gl_Position = float4(0, 0, 0, 0);
-
-// Varyings
-static noperspective float4 _vcolor_S0 = {0, 0, 0, 0};
-static noperspective float2 _varccoord_S0 = {0, 0};
-
-cbuffer DriverConstants : register(b1)
-{
-    float4 dx_ViewAdjust : packoffset(c1);
-    float2 dx_ViewCoords : packoffset(c2);
-    float2 dx_ViewScale  : packoffset(c3);
-    float clipControlOrigin : packoffset(c3.z);
-    float clipControlZeroToOne : packoffset(c3.w);
-};
-
-@@ VERTEX ATTRIBUTES @@
-
-VS_OUTPUT generateOutput(VS_INPUT input)
-{
-    VS_OUTPUT output;
-    output.gl_Position = gl_Position;
-    output.dx_Position.x = gl_Position.x;
-    output.dx_Position.y = clipControlOrigin * gl_Position.y;
-    if (clipControlZeroToOne)
-    {
-        output.dx_Position.z = gl_Position.z;
-    } else {
-        output.dx_Position.z = (gl_Position.z + gl_Position.w) * 0.5;
-    }
-    output.dx_Position.w = gl_Position.w;
-    output.gl_FragCoord = gl_Position;
-    output.v0 = _vcolor_S0;
-    output.v1 = _varccoord_S0;
-
-    return output;
-}
-
-VS_OUTPUT main(VS_INPUT input){
-    initAttributes(input);
-
-(_vcolor_S0 = _color);
-float _aa_bloat_multiplier5637 = {1.0};
-float2 _corner5638 = _corner_and_radius_outsets.xy;
-float2 _radius_outset5639 = _corner_and_radius_outsets.zw;
-float2 _aa_bloat_direction5640 = _aa_bloat_and_coverage.xy;
-float _is_linear_coverage5641 = _aa_bloat_and_coverage.w;
-float2 _pixellength5642 = rsqrt(vec2_ctor(dot(_skew.xz, _skew.xz), dot(_skew.yw, _skew.yw)));
-float4 _normalized_axis_dirs5643 = (_skew * _pixellength5642.xyxy);
-float2 _axiswidths5644 = (abs(_normalized_axis_dirs5643.xy) + abs(_normalized_axis_dirs5643.zw));
-float2 _aa_bloatradius5645 = ((_axiswidths5644 * _pixellength5642) * 0.5);
-float4 _radii_and_neighbors5646 = mul(_radii_selector, transpose(mat4_ctor_float4_float4_float4_float4(_radii_x, _radii_y, _radii_x.yxwz, _radii_y.wzyx)));
-float2 _radii5647 = _radii_and_neighbors5646.xy;
-float2 _neighbor_radii5648 = _radii_and_neighbors5646.zw;
-float _coverage_multiplier5649 = {1.0};
-if (any((_aa_bloatradius5645 > float2(1.0, 1.0))))
-{
-(_corner5638 = (max(abs(_corner5638), _aa_bloatradius5645) * sign(_corner5638)));
-(_coverage_multiplier5649 = (1.0 / (max(_aa_bloatradius5645.x, 1.0) * max(_aa_bloatradius5645.y, 1.0))));
-(_radii5647 = float2(0.0, 0.0));
-}
-float _coverage5650 = _aa_bloat_and_coverage.z;
-if (any((_radii5647 < (_aa_bloatradius5645 * 1.5))))
-{
-(_radii5647 = float2(0.0, 0.0));
-(_aa_bloat_direction5640 = sign(_corner5638));
-if ((_coverage5650 > 0.5))
-{
-(_aa_bloat_direction5640 = (-_aa_bloat_direction5640));
-}
-(_is_linear_coverage5641 = 1.0);
-}
-else
-{
-(_radii5647 = clamp(_radii5647, (_pixellength5642 * 1.5), (2.0 - (_pixellength5642 * 1.5))));
-(_neighbor_radii5648 = clamp(_neighbor_radii5648, (_pixellength5642 * 1.5), (2.0 - (_pixellength5642 * 1.5))));
-float2 _spacing5651 = ((2.0 - _radii5647) - _neighbor_radii5648);
-float2 _extra_pad5652 = max(((_pixellength5642 * 0.0625) - _spacing5651), float2(0.0, 0.0));
-(_radii5647 -= (_extra_pad5652 * 0.5));
-}
-float2 _aa_outset5653 = ((_aa_bloat_direction5640 * _aa_bloatradius5645) * _aa_bloat_multiplier5637);
-float2 _vertexpos5654 = ((_corner5638 + (_radius_outset5639 * _radii5647)) + _aa_outset5653);
-if ((_coverage5650 > 0.5))
-{
-if (((_aa_bloat_direction5640.x != 0.0) && ((_vertexpos5654.x * _corner5638.x) < 0.0)))
-{
-float _backset5655 = abs(_vertexpos5654.x);
-(_vertexpos5654.x = 0.0);
-(_vertexpos5654.y += (((_backset5655 * sign(_corner5638.y)) * _pixellength5642.y) / _pixellength5642.x));
-(_coverage5650 = ((((_coverage5650 - 0.5) * abs(_corner5638.x)) / (abs(_corner5638.x) + _backset5655)) + 0.5));
-}
-if (((_aa_bloat_direction5640.y != 0.0) && ((_vertexpos5654.y * _corner5638.y) < 0.0)))
-{
-float _backset5656 = abs(_vertexpos5654.y);
-(_vertexpos5654.y = 0.0);
-(_vertexpos5654.x += (((_backset5656 * sign(_corner5638.x)) * _pixellength5642.x) / _pixellength5642.y));
-(_coverage5650 = ((((_coverage5650 - 0.5) * abs(_corner5638.y)) / (abs(_corner5638.y) + _backset5656)) + 0.5));
-}
-}
-float2x2 _skewmatrix5657 = mat2_ctor(_skew.xy, _skew.zw);
-float2 _devcoord5658 = (mul(_vertexpos5654, transpose(_skewmatrix5657)) + _translate_and_localrotate);
-if ((0.0 != _is_linear_coverage5641))
-{
-(_varccoord_S0 = vec2_ctor(0.0, (_coverage5650 * _coverage_multiplier5649)));
-}
-else
-{
-float2 _arccoord5659 = ((1.0 - abs(_radius_outset5639)) + ((_aa_outset5653 / _radii5647) * _corner5638));
-(_varccoord_S0 = vec2_ctor((_arccoord5659.x + 1.0), _arccoord5659.y));
-}
-(gl_Position = vec4_ctor(_devcoord5658, 0.0, 1.0));
-(gl_Position = vec4_ctor(((gl_Position.xy * _sk_RTAdjust.xz) + (gl_Position.ww * _sk_RTAdjust.yw)), 0.0, gl_Position.w));
-return generateOutput(input);
-}
-                                    b      struct PS_INPUT
-{
-    float4 dx_Position : SV_Position;
-    float4 gl_Position : TEXCOORD2;
-    float4 gl_FragCoord : TEXCOORD3;
-    noperspective float4 v0 : TEXCOORD0;
-    noperspective float2 v1 : TEXCOORD1;
-};
-
-#pragma warning( disable: 3556 3571 )
-float float_ctor(bool x0)
-{
-    return float(x0);
-}
-float4 vec4_ctor(float x0)
-{
-    return float4(x0, x0, x0, x0);
-}
-float4 vec4_ctor(float x0, float x1, float x2, float x3)
-{
-    return float4(x0, x1, x2, x3);
-}
-float4 vec4_ctor(float2 x0, float2 x1)
-{
-    return float4(x0, x1);
-}
-// Uniforms
-
-uniform float2 _u_skRTFlip : register(c0);
-uniform float4 _urectUniform_S1_c0 : register(c1);
-uniform float4 _urectUniform_S1_c1_c0 : register(c2);
-uniform float4 _urectUniform_S1_c1_c1_c0 : register(c3);
-uniform float4 _urectUniform_S1_c1_c1_c1_c0 : register(c4);
-#ifdef ANGLE_ENABLE_LOOP_FLATTEN
-#define LOOP [loop]
-#define FLATTEN [flatten]
-#else
-#define LOOP
-#define FLATTEN
-#endif
-
-#define ATOMIC_COUNTER_ARRAY_STRIDE 4
-
-// Varyings
-static noperspective float4 _vcolor_S0 = {0, 0, 0, 0};
-static noperspective float2 _varccoord_S0 = {0, 0};
-
-static float4 out_sk_FragColor = {0, 0, 0, 0};
-static float4 gl_FragCoord = float4(0, 0, 0, 0);
-
-cbuffer DriverConstants : register(b1)
-{
-    float4 dx_ViewCoords : packoffset(c1);
-    float2 dx_FragCoordOffset : packoffset(c3);
-    float3 dx_DepthFront : packoffset(c2);
-    float2 dx_ViewScale : packoffset(c3.z);
-    uint dx_Misc : packoffset(c2.w);
-};
-
-#define GL_USES_FRAG_COORD
-@@ PIXEL OUTPUT @@
-
-PS_OUTPUT main(PS_INPUT input){
-    float rhw = 1.0 / input.gl_FragCoord.w;
-    gl_FragCoord.x = input.dx_Position.x - dx_FragCoordOffset.x;
-    gl_FragCoord.y = input.dx_Position.y - dx_FragCoordOffset.y;
-    gl_FragCoord.z = (input.gl_FragCoord.z * rhw) * dx_DepthFront.x + dx_DepthFront.y;
-    gl_FragCoord.w = rhw;
-    _vcolor_S0 = input.v0;
-    _varccoord_S0 = input.v1.xy;
-
-float4 _sk_FragCoord5634 = vec4_ctor(gl_FragCoord.x, (_u_skRTFlip.x + (_u_skRTFlip.y * gl_FragCoord.y)), gl_FragCoord.z, gl_FragCoord.w);
-float4 _outputColor_S05635 = _vcolor_S0;
-float _x_plus_15636 = _varccoord_S0.x;
-float _y5637 = _varccoord_S0.y;
-float _coverage5638 = {0};
-if ((0.0 == _x_plus_15636))
-{
-(_coverage5638 = _y5637);
-}
-else
-{
-float _fn5639 = (_x_plus_15636 * (_x_plus_15636 - 2.0));
-(_fn5639 = ((_y5637 * _y5637) + _fn5639));
-float _fnwidth5640 = fwidth(_fn5639);
-(_coverage5638 = (0.5 - (_fn5639 / _fnwidth5640)));
-(_coverage5638 = clamp(_coverage5638, 0.0, 1.0));
-}
-float4 _outputCoverage_S05641 = vec4_ctor(_coverage5638);
-float __21_coverage5642 = float_ctor(all((vec4_ctor(_sk_FragCoord5634.xy, _urectUniform_S1_c0.zw) > vec4_ctor(_urectUniform_S1_c0.xy, _sk_FragCoord5634.xy))));
-{
-(__21_coverage5642 = (1.0 - __21_coverage5642));
-}
-float __23_coverage5643 = float_ctor(all((vec4_ctor(_sk_FragCoord5634.xy, _urectUniform_S1_c1_c0.zw) > vec4_ctor(_urectUniform_S1_c1_c0.xy, _sk_FragCoord5634.xy))));
-{
-(__23_coverage5643 = (1.0 - __23_coverage5643));
-}
-float __25_coverage5644 = float_ctor(all((vec4_ctor(_sk_FragCoord5634.xy, _urectUniform_S1_c1_c1_c0.zw) > vec4_ctor(_urectUniform_S1_c1_c1_c0.xy, _sk_FragCoord5634.xy))));
-{
-(__25_coverage5644 = (1.0 - __25_coverage5644));
-}
-float __27_coverage5645 = float_ctor(all((vec4_ctor(_sk_FragCoord5634.xy, _urectUniform_S1_c1_c1_c1_c0.zw) > vec4_ctor(_urectUniform_S1_c1_c1_c1_c0.xy, _sk_FragCoord5634.xy))));
-{
-(__27_coverage5645 = (1.0 - __27_coverage5645));
-}
-float4 _output_S15646 = (vec4_ctor(__21_coverage5642) * (vec4_ctor(__23_coverage5643) * (vec4_ctor(__25_coverage5644) * (vec4_ctor(__27_coverage5645) * _outputCoverage_S05641))));
-{
-(out_sk_FragColor = (_outputColor_S05635 * _output_S15646));
-}
-return generateOutput();
-}
-                                                 R‹         out_sk_FragColor       out_sk_FragColor                      struct GS_INPUT
-{
-    float4 dx_Position : SV_Position;
-    float4 gl_Position : TEXCOORD2;
-    float4 gl_FragCoord : TEXCOORD3;
-    noperspective float4 v0 : TEXCOORD0;
-    noperspective float2 v1 : TEXCOORD1;
-};
-
-struct GS_OUTPUT
-{
-    float4 dx_Position : SV_Position;
-    float4 gl_Position : TEXCOORD2;
-    float4 gl_FragCoord : TEXCOORD3;
-    noperspective float4 v0 : TEXCOORD0;
-    noperspective float2 v1 : TEXCOORD1;
-};
-
-void copyVertex(inout GS_OUTPUT output, GS_INPUT input, GS_INPUT flatinput)
-{
-    output.gl_Position = input.gl_Position;
-    output.v0 = input.v0; 
-    output.v1 = input.v1; 
-    output.gl_FragCoord = input.gl_FragCoord;
-#ifndef ANGLE_POINT_SPRITE_SHADER
-    output.dx_Position = input.dx_Position;
-#endif  // ANGLE_POINT_SPRITE_SHADER
-}
-              §   §   §   §   §   §   ·   §   „      DXBCi<ø]¶Vg„Õ¥Áh   „     4      Ü  |  è  RDEFÄ     ˜      <    şÿ Á  ™  RD11<          (   $          |                              …                            $Globals DriverConstants «««|      È               …      (  @           ğ                  ÿÿÿÿ    ÿÿÿÿ    _sk_RTAdjust float4                             ı   ğ                  ÿÿÿÿ    ÿÿÿÿ    ş                   ÿÿÿÿ    ÿÿÿÿ    8  0                ÿÿÿÿ    ÿÿÿÿ    E  8         `      ÿÿÿÿ    ÿÿÿÿ    „  <         `      ÿÿÿÿ    ÿÿÿÿ    dx_ViewAdjust dx_ViewCoords float2 «                              dx_ViewScale clipControlOrigin float «««                             W  clipControlZeroToOne Microsoft (R) HLSL Shader Compiler 10.1 «««ISGNÔ         È                    È                  È                  È                  È                  È                  È                  È                  TEXCOORD «««OSGN˜         €                    Œ                   Œ                   Œ                    Œ                  SV_Position TEXCOORD «««SHEXd  P  Y  j Y  F         Y  F        _  ò     _  ò    _  ò    _  ò    _  ò    _  ò    _  2    _  ò    g  ò         e  ò     e  ò     e  ò     e  2     h             F     F      "      F     F    6  2     @                  6  B      @    €?  ‚      †    †    D  R     ö       ‚      Ö    Ö    D  ¢     ö     8  ò     æ    F       	2     æ
-€      F €      8  2     F     F     1  
-Â     @             @   @    8  
-ò     F    @     ?   ?  @?  @?<  ‚      :     *     4  
-2     F     @    €?  €?        8  ‚          
-       
-B     @    €?  €?  €?  €?:     7  	r      ö     F    F     8  
-2     F     @    À?  À?        4  Â              2  2     F €A      @    À?  À?        @     @   @        3  Â     ¦           2     æ
-€A      @     @   @                    F      "     ¶     F    4  2     F     F     3  2     F     F        2     F €A      F     2  2     æ
-    @    €=  €=        F €A      4  
-2     F     @                  2  2     F €A      @     ?   ?        æ
-    1  2      F      æ
-    <              
-      7  2           @                  F     1  
-Â     @                      1  
-2     F    @                    Â     ¦€A          +  Â     ¦    4  2     F     F€      8  Â     ¦        7  	¢      ö     ¦        2  	Â     ¦        V     6  B     @    €?1  
-2     @                  Ö     1  
-Â     V     @                    2     F €A      æ
-    +  2     F     1  ‚     @     ?*    7  
-2     ö    F €A      F     7  	r           F    F    2  	b             ¦    8  Â             9  
-r     F    @                    2     æ
-    F     8              €      8        :     
-              
-      *        B     
-      *        	       €        €         B     *    @     ¿8  B      €       *             *     
-              
-      @     ?8                   1        
-      @              
-      
-     6  ¢     @                €?6       *    7  	r           F    F    8        
-     * €      8        *     
-              
-      :        "     
-                    
-     @     ¿8        : €       
-         	B     : €       * €              
-      *             
-      @     ?8        :      *     1        
-      @              
-           6  B     @      7  	r           F    F    7  	r     ö    F    F           –    F      "     –    æ    8  "     *      
-        R              2  2     †      †€         Ö…         8  "           *€        6  ’          9        @                  :€        7  	B      
-      @      @     ?6  B     @      6  ò     F    6  ò     F    6  ò     F       R      ¦€Á      @    €?      €?    2  	2      F     Ö     †         B      
-      @    €?6       @      7  	2     ¦
-    F     f
-     >  STAT”   g             G                                                           
-                                                                                àŒ  t
-      DXBC;@!Çw éÇhuö9   t
-     4      À  ô  Ø	  RDEFä     ˜      <    ÿÿ Á  ¼  RD11<          (   $          |                              …                            $Globals DriverConstants «««|      È   P           …      X  @                       ¤      ÿÿÿÿ    ÿÿÿÿ    È           ä      ÿÿÿÿ    ÿÿÿÿ                ä      ÿÿÿÿ    ÿÿÿÿ      0         ä      ÿÿÿÿ    ÿÿÿÿ    9  @         ä      ÿÿÿÿ    ÿÿÿÿ    _u_skRTFlip float2 «                            œ  _urectUniform_S1_c0 float4 «                            Ü  _urectUniform_S1_c1_c0 _urectUniform_S1_c1_c1_c0 _urectUniform_S1_c1_c1_c1_c0 ««             ä      ÿÿÿÿ    ÿÿÿÿ    .  0         ¤      ÿÿÿÿ    ÿÿÿÿ    A             X      ÿÿÿÿ    ÿÿÿÿ    |  8          ¤      ÿÿÿÿ    ÿÿÿÿ    ‰  ,          ˜      ÿÿÿÿ    ÿÿÿÿ    dx_ViewCoords dx_FragCoordOffset dx_DepthFront float3 ««                            O  dx_ViewScale dx_Misc dword «                             ‘  Microsoft (R) HLSL Shader Compiler 10.1 ISGN˜         €                   Œ                   Œ                   Œ                   Œ                  SV_Position TEXCOORD «««OSGN,                               SV_TARGET ««SHEXÜ  P   7  j Y  F         Y  F        d  2        b  ò    b  2    e  ò      h              
-    @     À8        
-      
-    2  	              
-      z  "      
-      |  B      
-         	"      * €        €               
-                     
- €A       @     ?  "      
-    @      7  	                
-         	b            €A         2  B      €          *      
-€          1  2     F€         –     1  Â     V	     ¦           2     æ
-    F       ‚           
-     7  	‚      :      @      @    €?8        
-      :      1  2     F€         –     1  Â     V	     ¦           2     æ
-    F       ‚           
-     7  	‚      :      @      @    €?8        
-      :      1  2     F€         –     1  Â     V	     ¦           2     æ
-    F       ‚           
-     7  	‚      :      @      @    €?8        
-      :      1  2     F€         –     1  Â     V	     ¦           b      ¦          "      *            7  	"            @      @    €?8        
-            8  ò            F    >  STAT”   &                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ¨ÿÿÿnk  Ezäj•*Ú   Hõ        ğï ÿÿÿÿ    ÿÿÿÿö ÿÿÿÿ                      ime   Ğşÿÿsk  È÷ N       €Ô   ô      0                     ¤     8 ?  
-           :áVWo0ˆ†6İ'İ¾Å±Xó`X›,–xºÍ©
-Ç $ ?          Z]q«Õ
-Û÷×Nÿè    ?            ?                               P   µ‰û8„ÂË\l#mW wnÀd‡     P   µ‰û8„ÂË\l#mW wnÀd‡    Øÿÿÿlh Àõ Ç‘ ØP ZGVXHP ¨ãA¨P ‹æ}/¨ÿÿÿnk  Ezäj•*Ú   Àõ        Hù ÿÿÿÿ    ÿÿÿÿÈ÷ ÿÿÿÿ
-                      15.0    Øşÿÿsk  øñ ö       ˆÔ   ğ      0                     ¤     8 ?  
-           :áVWo0ˆ†6İ'İ¾Å±Xó`X›,–xºÍ©
-Ç $ ?          Z]q«Õ
-Û÷×Nÿè    ?            ?                                  Z]q«Õ
-Û÷×Nÿè          Z]q«Õ
-Û÷×Nÿ      ¨ÿÿÿnk  Ezäj•*Ú   p÷        °ù ÿÿÿÿ    ÿÿÿÿÈ÷ ÿÿÿÿ
-                      IMEJP   ğÿÿÿlh ğø 1œd¨ÿÿÿnk  Ezäj•*Ú   ğø         ÿÿÿÿÿÿÿÿ    ÿÿÿÿÈ÷ ÿÿÿÿ                       MSIME   ğÿÿÿlh Xù ë¸Û¨ÿÿÿnk  ±Ry½Ú   ¸í        pú ÿÿÿÿ    ÿÿÿÿøñ ÿÿÿÿ                      ATI e r ¨ÿÿÿnk  ±Ry½Ú   Àù        Øú ÿÿÿÿ    ÿÿÿÿøñ ÿÿÿÿ                      ACE 2 1 ğÿÿÿlh ú e ¨ÿÿÿnk  oAÚ   ú        @û ÿÿÿÿ    ÿÿÿÿøñ ÿÿÿÿ                      Settingsğÿÿÿlh €ú 6†*¨ÿÿÿnk  ¡çAÚ   €ú        ˆü ÿÿÿÿ    ÿÿÿÿøñ ÿÿÿÿ                      ADL a l èÿÿÿlh èú ¹e ¨N Ô ~d ÿÿÿnk   ˆâ¤Ú   èú         ÿÿÿÿÿÿÿÿ   øû øñ ÿÿÿÿ        L             MaxCofuncPathsw Àÿÿÿvk&   €       65{2ED9F23C-ED06-11EE-8A11-9C67F17BBB2D}22ğÿÿÿ¸û ü Hü Àÿÿÿvk&   €        {56766808-0B03-11EF-8A1D-DEF0D5651435}  Àÿÿÿvk&   €       24{35811335-0FFB-11EF-8A2F-806E6F6E6963}3.èÿÿÿlh  N )®œ?Xû  •-J¨ÿÿÿnk  Â½††b½Ú   ¸í        xş ÿÿÿÿ   0ı à’  ÿÿÿÿ6                    Autodeskàÿÿÿvk    ı     J CurProd èÿÿÿA u t o C A D   ¸J øÿÿÿøü ¨ÿÿÿnk  ¢ªç{ƒºÚ    ü           ÿÿÿÿ   pş ı ÿÿÿÿ
-                    AutoCADfPÿÿÿsk  À ˜Ì   ˜    ˆ€   Œ           l     $ ?          Z]q«Õ
-Û÷×Nÿè    ?            ?                                          àÿÿÿvk    `ş     7 CurVer6 ğÿÿÿR 2 4 . 3   øÿÿÿ@ş  ÿÿÿlh 8ı ı©Y=x »CİC˜.L ßùìZÀ0L ¹u à:L £şL  >9Å¨;L \À6%(<L ê‹A™0=L §¥ >L §Æ`?L Ö]n¬¨ÿÿÿnk  §n<ĞƒºÚ   8ı        à ÿÿÿÿ   pÿ ı ÿÿÿÿ       (             R24.3p-càÿÿÿvk    Pÿ      CurVer àÿÿÿA C A D - 7 1 0 1 : 4 1 9   ğÿÿÿ0ÿ €ÿ Àÿ Ğÿÿÿvk 
-   °ÿ     89LastLaunchedProduct47 36ğÿÿÿA C A D    Ğÿÿÿvk    ğÿ     87LastLaunchedLanguage 45.ğÿÿÿr u - R U   5=:0   ƒ Àÿÿÿvk& D   P°     e {24D89E24-2F19-4534-9DDE-6A6671FBB8FE}=¸ÿÿÿC : \ U s e r s \ @B5<\ O n e D r i v e \ >:C<5=BK   ÿÿÿnk  ¼_êg•*Ú   x. 	       ± ÿÿÿÿ    ÿÿÿÿØ¥  ÿÿÿÿL                   
-   UserAssist      ˆÿÿÿnk  Š7êg•*Ú   ˜°        °¸ ÿÿÿÿ   øo Ø¥  ÿÿÿÿ
-                 &   {9E04CAB2-CC14-11DF-BB8C-A2F1DED72085}  àÿÿÿvk   €         Version °ÿÿÿlh	 ø° 	rGªÀ¸ Å·/,è¹ H¤Wğº rêÖ1(¼ ë&ĞÃ`½ áµ	È= œœX¢À> ÛGˆløƒ B,•7¨ÿÿÿnk  XÍq¸øÚ   ø°         ÿÿÿÿÿÿÿÿ   ø Ø¥  ÿÿÿÿ           L         Count   Øÿÿÿvk L  `²     9 HRZR_PGYFRFFVBA °ùÿÿ,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ğÿÿÿlh à± mèºˆÿÿÿnk  ¼_êg•*Ú   ˜°        Ø¹ ÿÿÿÿ   øÏ Ø¥  ÿÿÿÿ
-                 &   {A3D53349-6E61-4557-8FC7-0028EDCEEBF6}  àÿÿÿvk   €         Version ¨ÿÿÿnk  XÍq¸øÚ   À¸         ÿÿÿÿÿÿÿÿ   øß Ø¥  ÿÿÿÿ           L         Count   Øÿÿÿvk L  ¸}       HRZR_PGYFRFFVBA ğÿÿÿlh X¹ mèºˆÿÿÿnk  Š7êg•*Ú   ˜°        àº ÿÿÿÿ   €º Ø¥  ÿÿÿÿ
-                 &   {B267E3AD-A825-4A09-82B9-EEC22AA3B847}  àÿÿÿvk   €       ˆlVersion{øÿÿÿ`º ¨ÿÿÿnk  Š7êg•*Ú   è¹         ÿÿÿÿÿÿÿÿ    ÿÿÿÿØ¥  ÿÿÿÿ                       Count   ğÿÿÿlh ˆº mèºˆÿÿÿnk  ¼_êg•*Ú   ˜°        ¼ ÿÿÿÿ   ˆ» Ø¥  ÿÿÿÿ
-                 &   {BCB48336-4DDD-48FF-BB0B-D3190DACB3E2}  àÿÿÿvk   €         Version øÿÿÿh» ¨ÿÿÿnk  XÍq¸øÚ   ğº         ÿÿÿÿÿÿÿÿ   ¼ Ø¥  ÿÿÿÿ           L         Count   Øÿÿÿvk L  „     ' HRZR_PGYFRFFVBAøÿÿÿè» ğÿÿÿlh » mèºˆÿÿÿnk  ¼_êg•*Ú   ˜°        P½ ÿÿÿÿ   À¼ Ø¥  ÿÿÿÿ
-                 &   {CAA59E3C-4792-41A5-9909-6A6A8D32490E}  àÿÿÿvk   €         Version øÿÿÿ ¼ ¨ÿÿÿnk  XÍq¸øÚ   (¼         ÿÿÿÿÿÿÿÿ   H½ Ø¥  ÿÿÿÿ           L         Count   Øÿÿÿvk L   À      HRZR_PGYFRFFVBA øÿÿÿ ½ ğÿÿÿlh È¼ mèºˆÿÿÿnk  Š7êg•*Ú   ˜°        ğÿ ÿÿÿÿ   ø½ Ø¥  ÿÿÿÿ
-                 &   {CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}  àÿÿÿvk   €       ‰VersionÂøÿÿÿØ½ ¨ÿÿÿnk  cêssúÚ   `½         ÿÿÿÿÿÿÿÿ·   ø Ø¥  ÿÿÿÿ          L         Count   Ğÿÿÿvk H   ˆ¾       HRZR_PGYPHNPbhag:pgbe ¼ °ÿÿÿÿÿÿÿ              €¿  €¿  €¿  €¿  €¿  €¿  €¿  €¿  €¿  €¿ÿÿÿÿ                Øÿÿÿvk L  pÆ       HRZR_PGYFRFFVBA ¸ÿÿÿvk* H   H¿       Zvpebfbsg.JvaqbjfAbgrcnq_8jrxlo3q8oojr!Ncc      °ÿÿÿ,   
-      [¼                                              U.ZsúÚ        °ÿÿÿvk3 H           ZvpebfbsgJvaqbjf.Pyvrag.POF_pj5a1u2gklrjl!PbegnanHVÿÿÿÿÿğÿÿÿx‹ °‹ Œ øÿÿÿ ¾ hbin À                         °ùÿÿ,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           °ùÿÿ,   6   ¡  emò           M i c r o s o f t . X b o x G a m i n g O v e r l a y _ 8 w e k y b 3 d 8 b b w e ! A p p                                                                                                                                                                                                                                                                                                                                                                                                                                                   
-  Ì± M i c r o s o f t . V i s u a l S t u d i o C o d e                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Æ  }eÊY a n d e x . P G M W D K D Z T N Q E A P J 5 N D Y 7 E H 3 J M A                                                                                                                                                                                                                                                                                                                                                                                                                                                                       °ÿÿÿ,          ø  œH<@<	«Ä;¿M	;{á¾;¯G;±‡ :÷LÛ5´`X>*®;                #P ÿÿÿvkD H   pÍ     ì{7P5N40RS-N0SO-4OSP-874N-P0S2R0O9SN8R}\Tvtnolgr\NccPragre\NcPrag.rkr   °ÿÿÿ,                                                                        Èÿÿÿvk H   øÍ     CBZvpebfbsg.Jvaqbjf.RkcybereT o g °ÿÿÿ,         cB ‰†
-<Ù…;56{=—‘9<3ï.=p&=B“:wE<]”›;åP³;   à†j;lúÚ    " M ¨ÿÿÿvk> H    Î       Zvpebfbsg.NhgbTrarengrq.{600N9R7R-N9O2-0ORR-56P1-545351QRN529}  °ÿÿÿ,          -  l‚ó:    ØÂk:    Êú);%¬;ú€I;    y:úù	:                   ÿÿÿvkS H   `Ï       jvaqbjf.vzzrefvirpbagebycnary_pj5a1u2gklrjl!zvpebfbsg.jvaqbjf.vzzrefvirpbagebycnaryP   °ÿÿÿ,                   „Ö1<‹µ7        Ù] <                   À¿¨ãèÚ    P   °ÿÿÿvk8 H    Ğ       Zvpebfbsg.YbpxNcc_pj5a1u2gklrjl!JvaqbjfQrsnhygYbpxFperra                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                HvLE @      5Ê  °X    "¿i‚]Ğ~F„Œ.7?        ğ     °    hbin                           ¨ÿÿÿnk, y‚kÕòÚ            ¨  è €    ÿÿÿÿx   ÿÿÿÿ*                      ROOT    øşÿÿsk  î X    ì    ˜Ğ   à           ¼     $ ?          Z]q«Õ
-Û÷×Nÿè    ?            ?                                            8   
-           °1€?l¼cL<àPÑ—¡bË~z¦Àúæ—ñ£Î                         ÿÿÿnk  Å…f•*Ú              0  ÿÿÿÿ    ÿÿÿÿà  ÿÿÿÿ                   	   AppEvents      8ÿÿÿsk  h  ğŒD    °    ˜˜   ¤           „     $ ?          Z]q«Õ
-Û÷×Nÿè    ?            ?                                                          ÿÿÿlh €  †¼¬Èˆ  #ÀU@–  ¹×œ½pà ÉÎHoØã 5%7 0ä ‡nåàè rØR¿8é K¾[q¸í cşéĞ¦$ ùĞAañ% j	 ÿÿÿnk  Å…f•*Ú   €  H       8  ÿÿÿÿ    ÿÿÿÿh  ÿÿÿÿ8                      EventLabels     8ÿÿÿsk  `… à  ,  °    ˆ˜   ¤           „     $ ?          Z]q«Õ
-Û÷×Nÿè    ?            ?                                                         èÿÿÿlh   MÿNà(V  TåN²¨ÿÿÿnk  Å…f•*Ú             ÿÿÿÿÿÿÿÿ   Ø  h  ÿÿÿÿ           "          .Defaultèÿÿÿvk     ¸         àÿÿÿD e f a u l t   B e e p     ğÿÿÿ   è      Øÿÿÿvk "           DispFileName    Øÿÿÿ@ m m r e s . d l l , - 5 8 2 4     ¸ıÿÿlhH H  Jë€  ı¤ÁE˜  Tñë	  k— 
-  ¢³ÅL  1m›ˆ  jw¸x  ³×¾  †!­  
-—Hâ°  <}lÎÀ  ©y>ñ  Ó×‰³  #X½ç  ¸%"´   ×ŸeP  Ñù8Ò€  Qmå°  ¶ût_°  {<$ú¸  Ö7   LU1â˜  [3´  8ÕˆTˆ  ú–ğÕ˜   Ê¯áà!  ÃÚÖOè"  €Š_ğ#  Ši¨Vğ$  Ã‡XM&  <ÿã0'  !ï?–X(  Şãó·€)  ßãó·¨*  àãó·Ğ+  áãó·ø,  âãó· .  ããó·H/  äãó·˜0  åãó·À1  ûÎë"3  ˆã¿`4  yê°5  zê 7  {êP8  |ê 9  }êğ:  ~ê@<  ê=  €êà>  ìãp @  [»@A  Wz B  üÔË-8C  JÅ> (D  }3fxE  F»qxF  MTR€€G  ”jØxH  a€½pI  íoŠQxJ  ~oõàxK  ŸÈğÜhL  t`bhM  sÈ|~ˆN  ´Ÿ~~€O  °w<¡°P  İ°vx Q  ä]n­ÈR  Îí\ èS  4Íâ U  W“ˆÒ˜ÿÿÿnk  Å…f•*Ú             ÿÿÿÿÿÿÿÿ   0  h  ÿÿÿÿ           (          ActivatingDocument    èÿÿÿvk  (             ĞÿÿÿC o m p l e t e   N a v i g a t i o n       ğÿÿÿè  @      Øÿÿÿvk (   h        DispFileName    Ğÿÿÿ@ i e f r a m e . d l l , - 1 0 3 2 1        ÿÿÿnk  Å…f•*Ú             ÿÿÿÿÿÿÿÿ   0	  h  ÿÿÿÿ           "       
-   AppGPFault     èÿÿÿvk     	         àÿÿÿP r o g r a m   E r r o r   ğÿÿÿø  @	      Øÿÿÿvk "   h	        DispFileName    Øÿÿÿ@ m m r e s . d l l , - 5 8 2 5      ÿÿÿnk  Å…f•*Ú             ÿÿÿÿÿÿÿÿ   8
-  h  ÿÿÿÿ           ,          BlockedPopup    èÿÿÿvk  ,   
-         ĞÿÿÿB l o c k e d   P o p - u p   W i n d o w   ğÿÿÿğ	  H
-      Øÿÿÿvk (   p
-        DispFileName    Ğÿÿÿ@ i e f r a m e . d l l , - 1 0 3 2 5       ¨ÿÿÿnk  Å…f•*Ú             ÿÿÿÿÿÿÿÿ   (  h  ÿÿÿÿ           (          CCSelectèÿÿÿvk              èÿÿÿS e l e c t         ğÿÿÿø
-  8      Øÿÿÿvk (   `        DispFileName    Ğÿÿÿ@ i e f r a m e . d l l , - 1 0 3 2 3        ÿÿÿnk  Å…f•*Ú             ÿÿÿÿÿÿÿÿ   (  h  ÿÿÿÿ           "          ChangeTheme    èÿÿÿvk              àÿÿÿC h a n g e   T h e m e     ğÿÿÿğ  8      Øÿÿÿvk "   `        DispFileName    Øÿÿÿ@ m m r e s . d l l , - 5 8 6 0     ¨ÿÿÿnk  Å…f•*Ú             ÿÿÿÿÿÿÿÿ     h  ÿÿÿÿ           "          Close  èÿÿÿvk     ø         àÿÿÿC l o s e   P r o g r a m   ğÿÿÿà  (      Øÿÿÿvk "   P        DispFileName    Øÿÿÿ@ m m r e s . d l l , - 5 8 2 6     ˜ÿÿÿnk  Å…f•*Ú             ÿÿÿÿÿÿÿÿ   0  h  ÿÿÿÿ           .          CriticalBatteryAlarm  èÿÿÿvk  .   ø         ÈÿÿÿC r i t i c a l   B a t t e r y   A l a r m         ğÿÿÿà  @      Øÿÿÿvk "   h        DispFileName    Øÿÿÿ@ m m r e s . d l l , - 5 8 2 7      ÿÿÿnk  Å…f•*Ú             ÿÿÿÿÿÿÿÿ   0  h  ÿÿÿÿ           "          DeviceConnect¤ÁEèÿÿÿvk              ØÿÿÿD e v i c e   C o n n e c t         ğÿÿÿğ  @      Øÿÿÿvk "   h        DispFileName    Øÿÿÿ@ m m r e s . d l l , - 5 8 2 8      ÿÿÿnk  Å…f•*Ú             ÿÿÿÿÿÿÿÿ   ğ  CbRMEQIEeyswiBcExwMQ+x7OHYy+4Sa0+2QRH5AkFNy+cb0umJv9dOWTIrSZEdDEpI4Qs7a+jjBhyRO4iBwFN3CC4RAMj9IhiT0SOQ5lH5PEI7jIUkiH2Fni17Mf5hoRUrtQ056eMg5JFEYoNhJRQbKvObb4lX6YmUxkWFIooBg7CQRhhSF/jBEQRRjx0vidZTEsfmOUeKswxWJSBgOSRJHCXZI7PsBQtGQhCFKEsfHOYkDo+YoCqLE2VLJKNfLIfEDFAfO9yAm1M4TgoPIQcvgex4HZEgiz48Tuy1cl0NCEuzFToc/7EcocFK2H1oVLF83E76DcOjFKA6GhARhmDjZikZBFHpDEoSJFzoJZiuMg2hI4iD2Y2ftoWQZ42hICI4IdrjgFess55Mg8J2ltwqywLAXE99PnDzxGMNROAxREmFktN4kYi9l/ebmRTePbobEC73IdzLz7maztU+QhoSEkR920Wj7TuUlpVLXSIFTFpTxxjx4JVfDIPGIHzoBCk2wQMMgSuLQdxTwTNPlf+QwSGJCYsdLQp/6UWAI+ShyWBzTdRx6wyCMYoIc5iXrLPasWkgSO9jLkXE/Q4KjGGEHMlrptUdwMgxiRLDnLMMsQgmOh8TzYj9xktUK8iTEw8DDCfEcyDwfRUM/ikmAHZyuVzQMvKEf+kFg6JVUBV4w9IMIh9hZf8+8yEdk6KPQwwYb+Dq2URcTW5B17+rqKBpg5JOwcQzmG2EUBy5yceMYAoR83HjsqY0Snu+7QQuPwpiEJgY0fgPhJEbkQA+FNibU/nVqHTC2nqv9DiIcRx36fog947CD9tsPoqjzjXziG7/UOC4vScLAO8x7SUw81Phi++0FKGm8d501IC85rGe+I88lLm4HSICOCAZJguIDw54fhn5XQC9IkIt9N/bsQBT5xNvrI4yDKHATF9XqDL0QRSazqJ1qQPzId2M3JjaDQYh4YWSUFQxOK7Z6t7DxcqEbNtKR2DhxHLg+Hlyudlo0P7S5QtBuauhHSUcGkpjcKdgrLSKx3dRocJreDlqEJO4qAfkJIi7Gh3CRGOe113MYetFBieYr2mOHXhzjvcUFvhebyFXPBTgKrDUO/vrrfwElwdZP9DYAAA==","variations_config_ids":"{\"ECS\":\"P-R-1082570-1-11,P-D-42388-2-6\",\"Edge\":\"P-X-1255789-2-9,P-X-1142937-6-31,P-X-1253080-1-9,P-X-1133145-8-25,P-X-1257859-1-11,P-X-1257187-2-5,P-X-1244519-1-6,P-X-1177143-12-39,P-X-1259218-2-5,P-X-1238055-2-11,P-X-1254241-3-7,P-X-1253300-1-5,P-X-1242539-2-13,P-X-1248759-1-5,P-X-1226612-1-5,P-X-1239732-2-11,P-X-1241969-2-6,P-X-1242518-2-7,P-X-1176504-4-10,P-X-1235380-2-9,P-X-1220525-2-11,P-X-1230185-1-7,P-X-1110552-8-34,P-X-1116542-8-34,P-X-1234280-1-6,P-X-1232754-2-5,P-X-1220520-1-7,P-X-1224057-2-5,P-X-1227710-4-18,P-X-1148585-2-7,P-X-1225549-2-3,P-X-1222363-1-5,P-X-1159834-3-15,P-X-1222396-1-3,P-X-1066161-19-50,P-X-1126445-2-5,P-X-1116674-11-34,P-X-1155327-1-7,P-X-1100970-2-9,P-X-1131577-2-7,P-X-1096251-1-15,P-X-1095018-2-6,P-X-1113878-6-21,P-X-1096650-2-6,P-X-1077147-1-9,P-X-1071593-2-4,P-X-1061902-3-17,P-X-1048071-1-5,P-X-1010579-1-9,P-R-1275879-14-8,P-R-1068861-4-11,P-R-1008497-12-13,P-R-67067-6-61,8diji773:599478,enp_shopping_inprivate:596866,singlelineentities24:587729,treat_ab:616411,8f5hi857:611152,f646h524:623028,directnav:573451,pnrwithuiwithoutdropdown:565871,headeron:589844,save_e6e5d349:560570,aaj91288:597312,v1_edgeshoppingcouponattribution:576418,codesweepv2fc_treatment:574522,972ec163:614782,098h7988:614819,h6f57566:598792,58334117:566199,32g58473:577479,variantb:534184,j485a473:555247,1b4jg845:570389,enp_ntp:559208,treatment:523714,citreatmentflight:523713,12608184:554669,dfa74760:546906,92if2247:584838,h019b827:552752,nonuitreatment:535443,b0f4d445:585339,g90ii276:619721,v1_disable_package_tracking:506073,dedupmvsites:556736,v1_disable_abandoned_cart:506074,plainwithoutnurf:490536,41612551:479863,sendtabqr:498558,0963a374:506317,i88ah860:467851,i09hd800:546598,20g12363:527812,edauth0529:481520,b6d71928:500839,9ffeg962:402950,ed0317:378542,2chfa640:363442,edpas404:347262,hjd07315:316020,edenh823:312569\",\"EdgeConfig\":\"P-R-1421356-1-5,P-R-1412184-1-2,P-R-1241132-1-6,P-R-1176033-4-5,P-R-1168565-1-8,P-R-1129815-1-5,P-R-1160552-1-3,P-R-1159247-1-3,P-R-1147287-1-6,P-R-1136203-1-4,P-R-1133477-1-4,P-R-1113531-4-9,P-R-1099640-1-4,P-R-1098501-1-7,P-R-1090419-2-5,P-R-1082109-1-6,P-R-1082170-5-26,P-R-1054140-1-4,P-R-1049918-1-3,P-R-1036635-1-5,P-R-110491-23-80,P-R-77350-1-8,P-R-68474-9-12,P-R-60617-8-21,P-R-45373-8-85,P-D-1150672-1-4\",\"EdgeFirstRun\":\"P-R-1257346-6-7,P-R-58579-24-32\",\"EdgeFirstRunConfig\":\"P-R-1253659-1-4,P-R-1246379-1-5,P-R-1159388-4-7,P-R-1075865-1-7\",\"Segmentation\":\"P-R-1159985-1-5,P-R-1113915-22-11,P-R-1098334-1-6,P-R-66078-1-3,P-R-66077-1-5,P-R-60882-1-2,P-R-43082-3-5,P-R-42744-1-2\"}","variations_country":"RU","variations_crash_streak":0,"variations_failed_to_fetch_seed_streak":1,"variations_google_groups":{"Default":[]},"variations_last_fetch_time":"13369444286507178","variations_last_runtime_fetch_time":"13369444586593745","variations_limited_entropy_synthetic_trial_seed":"37","variations_limited_entropy_synthetic_trial_seed_v2":"71","variations_permanent_consistency_country":["128.0.2739.42","RU"],"variations_runtime_compressed_seed":"H4sIAAAAAAAAAG2Q3W7aQBCF32WuGdUzs7vetdQLwo9aVFWIQKM27oUJW2QF2wibNgjx7tHaBFCTyzNz5szMd4RBVf7J11+HNSRwTGE0uE8hSWGKM6TIso4jJCTqTXGIisVaZDQp9FIYrdZ+WBVZXvafmrwq65tBJ6x0GIx7XUFiJyYU1LnAyjh5i253mUghoZhWx1ai1m87KYbNNS+miDVqJGmlETIaFXI3q4WVIGPnVVHkBOWtKTZWCmN0XVfIOodMqKy0PxJpa0ghozprsUI2XHb5erYvm7zw13/ZkbGEhPp/T4f3hozY2ASkrnXe+3XhyyYL/K4m0s7ZgE93bIjEkUbmKy1nRQKu7iljorg98aLiy7SJrGUk5I6GRJZRzj3FAQYhp3CC3u3dkBxh0R9UxTZr8mW+yZvDOH8JVV9my40f+6zZ73wNySMU9QfO36dT7z2IEDAqts3hw877aO93T13UF5+t/K4OtkG1L5vdYVCtPCQwW4TL59kaEkihHs1/fJLtZFTl3/W/X+y249ni78Pd/OXbZror+pOH6fPPfDkZV8+fU4DT6RWnQrjQAgMAAA==","variations_safe_compressed_seed":"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

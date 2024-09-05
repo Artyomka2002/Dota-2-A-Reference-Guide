@@ -5,13 +5,15 @@
   "main": "vite.config.js",
   "devDependencies": {
     "@vitejs/plugin-react-swc": "^3.7.0",
+    "gh-pages": "^6.1.1",
     "vite": "^5.4.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
   },
   "keywords": [],
   "author": "",
