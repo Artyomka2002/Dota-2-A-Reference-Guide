@@ -41,6 +41,8 @@
   flex-direction: column;
   align-items: center;
   width: 100px;
+  font-family: cursive;
+  word-break: break-word;
 }
 
 .heroItem > a {
