@@ -1,0 +1,29 @@
+/* src/components/LoadingSpinner.css */
+
+.loadingSpinnerContainer {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    height: 100vh;
+    color:#F6D265;
+    font-size: 20px;
+    background-color: #1d1f24;
+    font-family: monospace;
+  }
+  
+  .spinner {
+        border: 6px solid rgb(147 147 147);
+        border-radius: 50%;
+        border-top: 6px solid #F6D265;
+        width: 140px;
+        height: 140px;
+        animation:  spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  

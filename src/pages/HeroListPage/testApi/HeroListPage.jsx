@@ -7,6 +7,7 @@ import { sort } from "../../../common";
 import HeroMas from "./HeroListPageComponents/HeroMas";
 import { sortAtr, links, sortRoles } from "../../../JsonStorage/objectSort"
 import HeroListFilter from "./HeroListPageComponents/HeroListFilter";
+import LoadingSpinner from "../../../UI/Loading/Loading";
 // import { links } from "../../../JsonStorage/objectSort";
 // import LoadingScreen from "../../../UI/loading/loading";
 // import TextAnimation from "../../../UI/textAnimation/textAnimation";
@@ -35,8 +36,8 @@ const HeroListPage = () => {
         setSelectedSort([])
     }
 
-    // if (loading) return <LoadingScreen /> //!!!
-    // if (!sorterdPost) return null
+    if (loading) return <LoadingSpinner/> 
+    if (!sorterdPost) return null
 
     //Можно вынести в хук состояния .. Пересмотреть 17-20 строки , возможно сделать бзе тернарника
     return (

@@ -5,6 +5,7 @@ import HeroMas from "./src/pages/HeroListPage/testApi/HeroListPageComponents/Her
 import useFetch from "./src/hooks/useFeatch";
 import HeroListPage from "./src/pages/HeroListPage/testApi/HeroListPage";
 import InformationAboutTheHeroes from "./src/pages/InformationAboutTheHeroes/InformationAboutTheHeroes";
+import LoadingSpinner from "./src/UI/Loading/Loading";
 function App() {
   return (
     <>
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route path="Error" element={<HeroListPage />} />
             <Route path="Error/:id" element={<InformationAboutTheHeroes />} />
+            <Route path="loading" element={<LoadingSpinner />} />
           </Route>
         </Routes>
       {/* </Router> */}

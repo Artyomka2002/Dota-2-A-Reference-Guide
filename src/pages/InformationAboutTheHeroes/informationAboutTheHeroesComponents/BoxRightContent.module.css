@@ -193,11 +193,7 @@
   font-family: system-ui;
 }
 
-.buttonNavigateBottom {
-  background-color: #1d1f24;
-  border: none;
-  color: #ffb648;
-}
+
 
 .buttonContainer {
   display: flex;
@@ -212,6 +208,46 @@
   padding: 15px;
   color: #ffb648;
   font-family: monospaceF;
+  text-align: center;
+}
+
+
+/* Стиль для контейнера с кнопками */
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* Стиль для кнопок навигации */
+.buttonNavigateBottom {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #ffb648;
+  cursor: pointer;
+  position: relative;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+/* Стиль для линейки под кнопками при наведении */
+.buttonNavigateBottom::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #ffb648;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+/* Показываем линию при наведении */
+.buttonNavigateBottom:hover::after {
+  transform: scaleX(1);
 }
 
 @media (max-width: 1150px) {
