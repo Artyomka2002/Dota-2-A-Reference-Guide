@@ -37,10 +37,13 @@ const InformationAboutTheHeroes = () => {
     //     {dataSorce.localized_name } , Айди элемента
     //    </>
     <main className={cl.main}>
+         <Modal setVisible={setModal} visible={modal} cross={'×'}>
+         <img style={{ height: '600px' }} src={sort(dataSorce, links)}></img>
+    </Modal>
       <div
         style={{ display: "flex", flexDirection: "column", padding: "10px" }}
       >
-        <NestedContent dataSorce={dataSorce} sort={sort(dataSorce, links)} />
+        <NestedContent setModal={(setModal)} dataSorce={dataSorce} sort={sort(dataSorce, links)} />
         <CollapseContainer dataSorce={dataSorce} dateded={dateded} id={id} />
       </div>
       <BoxRightContent dataSorce={dataSorce} id={id} />
@@ -50,6 +53,4 @@ const InformationAboutTheHeroes = () => {
 export default InformationAboutTheHeroes;
 
 //    className={cl.containerLim}
-//     <Modal setVisible={setModal} visible={modal} cross={'×'}>
-//         <img style={{ height: '600px' }} src={sort(dataSorce, links)}></img>
-//     </Modal>
+

@@ -18,7 +18,14 @@
     padding: 5px 10px;
     background: white;
     border-radius: 16px;
+    width: 80vw;
 }
+
+.modalContent>img {
+    width: inherit;
+    height: 100vh;
+}
+
 
 .modalWrapper {
     z-index: 100;
@@ -32,7 +39,25 @@
     text-align: end;
     cursor: pointer;
 }
+
 .containerCross {
     display: flex;
-   justify-content: end;
+    justify-content: end;
+}
+
+
+@media(min-width:1150px) {
+    .modalContent {
+        width: 50vw;
+    }
+}
+
+@media(min-width:1980px) {
+    .modalContent {
+        height: 70vh;
+    }
+
+    .modalContent>img {
+        height: 850px !important;
+    }
 }

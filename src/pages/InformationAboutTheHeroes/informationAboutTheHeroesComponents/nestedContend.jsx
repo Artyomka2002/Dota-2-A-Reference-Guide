@@ -6,7 +6,7 @@ const NestedContent = ({ setModal, dataSorce}) => {
         <div className={cl.nestedCont} >
             <div className={cl.contInfoRight}>
                 <img src={sort(dataSorce, links)} onClick={() => {
-                    // setModal(true)
+                    setModal(true)
                 }} className={cl.imgHeroesURL} />
                 <label>{dataSorce.localized_name}</label>
             </div>

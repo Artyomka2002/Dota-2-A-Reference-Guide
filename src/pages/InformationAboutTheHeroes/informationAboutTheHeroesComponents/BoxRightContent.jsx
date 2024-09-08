@@ -129,7 +129,7 @@ const BoxRightContent = ({ dataSorce, id }) => {
             className={cl.buttonNavigateBottom}
             onClick={() => {
               const nextId = parseInt(id, 10) - 1;
-              navigate(`/Error/${nextId.toString()}`);
+              navigate(`/${nextId.toString()}`);
             }}
           >
             Предыдущий герой
@@ -139,7 +139,7 @@ const BoxRightContent = ({ dataSorce, id }) => {
             className={cl.buttonNavigateBottom}
             onClick={() => {
               const nextId = parseInt(id, 10) + 1;
-              navigate(`/Error/${nextId.toString()}`);
+              navigate(`/${nextId.toString()}`);
             }}
           >
             Следущий герой
