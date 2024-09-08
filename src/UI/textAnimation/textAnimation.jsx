@@ -33,7 +33,6 @@ const TextAnimation = ({ children }) => {
                 <p className={cl.typewriterText}>{text}</p>
                 <button>Продолжить просмотр</button>
             </div>
-
         </div>
         //modal свою вставиить
     );

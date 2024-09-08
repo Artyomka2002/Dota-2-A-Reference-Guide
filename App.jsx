@@ -11,10 +11,9 @@ function App() {
     <>
       {/* <Router> */}
         <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route path="Error" element={<HeroListPage />} />
-            <Route path="Error/:id" element={<InformationAboutTheHeroes />} />
-            <Route path="loading" element={<LoadingSpinner />} />
+          <Route path="/" element={<Layout/>}>
+            <Route index element={<HeroListPage />} />
+            <Route path=":id" element={<InformationAboutTheHeroes />} />
           </Route>
         </Routes>
       {/* </Router> */}
