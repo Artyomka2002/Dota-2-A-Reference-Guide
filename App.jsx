@@ -14,6 +14,7 @@ function App() {
           <Route path="/" element={<Layout/>}>
             <Route index element={<HeroListPage />} />
             <Route path=":id" element={<InformationAboutTheHeroes />} />
+            <Route path="loading2" element={<LoadingSpinner />} />
           </Route>
         </Routes>
       {/* </Router> */}

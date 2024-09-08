@@ -13,7 +13,7 @@ const NestedContent = ({ setModal, dataSorce}) => {
             <div className={cl.conteinerInfoLeft}>
                 <span className={cl.spanHero}>О герое:</span>
                 <div className={cl.ptext}>
-                    <p style={{ color: '#bdbdbd' }}>
+                    <p style={{ color: '#bdbdbd', fontSize:'22px' , fontFamily:'system-ui' }}>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex libero facilis cupiditate eligendi numquam debitis tempora nobis esse necessitatibus nisi nulla maiores blanditiis modi, reprehenderit quaerat eveniet quisquam pariatur dolorum!
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex libero facilis cupiditate eligendi numquam debitis tempora nobis esse necessitatibus nisi nulla maiores blanditiis modi, reprehenderit quaerat eveniet quisquam pariatur dolorum!
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex libero facilis cupiditate eligendi numquam debitis tempora nobis esse necessitatibus nisi nulla maiores blanditiis modi, reprehenderit quaerat eveniet quisquam pariatur dolorum!

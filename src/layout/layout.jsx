@@ -16,8 +16,8 @@ const Layout = () => {
                     </div>
                     <div className={cl.headerRightContent}>
                         <div className={cl.rightSpanContainer}>
-                            <NavLink style={{ textDecoration: 'none', color: '#F6D265' }} to='Error'><span>Герои</span></NavLink >
-                            <NavLink style={{ textDecoration: 'none', color: '#F6D265' }} to='/'> <span>Летсплеи</span></NavLink >
+                            <NavLink style={{ textDecoration: 'none', color: '#F6D265' }} to='/'><span>Герои</span></NavLink >
+                            <NavLink style={{ textDecoration: 'none', color: '#F6D265' }} to='loading2'> <span>Летсплеи</span></NavLink >
                         </div>
                         <div>
                             <img className={cl.svgDota} />
