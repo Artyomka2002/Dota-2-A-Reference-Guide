@@ -96,6 +96,8 @@
     .headerLeftContent {
         display: none;
     }
-
+.toPannel{
+    padding: 0 15px;
+}
 
 }
